@@ -207,6 +207,7 @@ body #boxes .box {
   float: left;
   text-align: center;
   width: 20%;
+  height: 380px;
   margin: 0px 25px;
   padding-top: 15px;
   background-color: #1C201A;

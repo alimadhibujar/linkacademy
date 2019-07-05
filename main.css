@@ -200,15 +200,18 @@ body #newsletter form .button_1 {
 }
 
 body #boxes {
-  background-color: #1C201A;
-  color: #35424a;
+  background-color: #000B18;
 }
 
 body #boxes .box {
   float: left;
   text-align: center;
   width: 20%;
-  padding: 10px 25px;
+  margin: 0px 25px;
+  padding-top: 15px;
+  background-color: #1C201A;
+  color: #35424a;
+  border-radius: 10px;
 }
 
 body #boxes .box img {
@@ -728,14 +731,23 @@ footer .social-media-buttons .social-media-button.codepen:hover i {
 }
 
 /* Main-col */
-article#main-col {
-  float: left;
-  width: 65%;
+#main {
+  background-color: #000B18;
+  /* Sidebar */
 }
 
-/* Sidebar */
-aside#sidebar {
+#main article#main-col {
+  float: left;
+  width: 65%;
+  border-radius: 10px;
+}
+
+#main aside#sidebar {
   float: right;
   width: 30%;
+}
+
+#main aside#sidebar .dark {
+  border-radius: 10px;
 }
 /*# sourceMappingURL=main.css.map */

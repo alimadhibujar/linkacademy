@@ -100,19 +100,22 @@ body{
     }
   }
   
-    #boxes{ 
-    background-color:$color10;
-    color:$color2;
-  
+  #boxes{ 
+      
+    background-color:#000B18;
       .box{
       float:left;
       text-align: center;
       width:20%;
-      padding:10px 25px;
-      }
-  
-      .box img{
-        width:90px;
-      }
+      margin:0px 25px;
+      padding-top: 15px;
+      background-color:$color10;
+      color:$color2;
+      border-radius: 10px;
+    }
+
+    .box img{
+      width:90px;
+    }
   } 
 }

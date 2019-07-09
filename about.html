@@ -146,7 +146,7 @@
           <ul>
             <li><a href="index.html"><i class="fas fa-home" style='font-size:20px'></i>Home</a></li>
             <li class="current"><a href="about.html">About</a></li>
-            <li><a href="#"><i class="fa fa-search"></i>Search</a></li>
+            <li><button id="loginbutton" onclick="document.getElementById('id01').style.display='block'">Login</button></li>
           </ul>
         </nav>
       </div>
@@ -214,11 +214,31 @@
       
       
       <div class="content">
-        <div class="container">
-          <h1 class="animated infinite pulse delay-2s"><span class ="highlight">Professional</span> Web Design</h1>
-          <p>Ofrojmë falas një formim cilësor, i cili ndryshon jetën e kujtdo që ëndërron një nga profesionet e së ardhmes.</p>
-        </div>
+        <h1 class="animated infinite pulse delay-2s"><span class ="highlight">Professional</span> Web Design</h1>
+        <p>Ofrojmë falas një formim cilësor, i cili ndryshon jetën e kujtdo që ëndërron një nga profesionet e së ardhmes.</p>
       </div>
+        <!--    LOGIN FORM   -->
+     <div id="id01" class="modal">
+      <span onclick="document.getElementById('id01').style.display='none'" 
+      class="close" title="Close Login">&times;</span>
+      <div class="wrapper">
+        <div class="wrapper-content">
+          <button type="button"><i class="fa fa-facebook"></i></button>
+          <button type="button"><i class="fa fa-github"></i></button>
+         
+          <div class="or-email"><span>Or  via  email</span></div>
+          <form>
+            <input type="text" class="user-email" id="email" placeholder="Email" autocomplete="off"> 
+            <input type="password" class="user-pasword" id="password" placeholder="Password" autocomplete="off">
+          </form>
+          <div class="logout">
+            <input type="submit" value="Login">
+          </div>
+          <a href="#" class="forgot-pass">Forgotten password?</a>
+        </div>
+        
+       </div>
+    </div> 
       
     </section>
   

@@ -80,6 +80,12 @@ header nav li #loginbutton {
   opacity: 0.7;
   text-transform: uppercase;
   font-size: 20px;
+  border-radius: 5px;
+}
+
+header nav li #loginbutton:hover {
+  color: #cccccc;
+  font-weight: bold;
 }
 
 header #branding {
@@ -649,6 +655,7 @@ body #boxes .box img {
   width: 25%;
   margin: 100px auto;
   background: #35394a;
+  border-radius: 10px;
   /* Old browsers */
   /* FF3.6+ */
   /* Chrome,Safari4+ */
@@ -666,7 +673,7 @@ body #boxes .box img {
   width: 45%;
   padding: 11px 0 24px;
   outline: initial;
-  background-color: #272a2c;
+  background-color: black;
   border-radius: 10px;
   color: #fff;
   border: 1px solid rgba(46, 46, 47, 0.72);

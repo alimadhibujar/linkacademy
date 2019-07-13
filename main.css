@@ -232,8 +232,8 @@ body #boxes .box {
   text-align: center;
   width: 20%;
   height: 380px;
-  margin: 0px 25px;
-  padding-top: 15px;
+  margin: 0px 20px;
+  padding: 15px 6px 0px;
   background-color: #1C201A;
   color: #35424a;
   border-radius: 10px;
@@ -663,7 +663,7 @@ body #boxes .box img {
 .modal .wrapper-content {
   position: relative;
   width: 25%;
-  margin: 100px auto;
+  margin: 110px auto;
   background: #35394a;
   border-radius: 10px;
   /* Old browsers */
@@ -949,5 +949,6 @@ footer .social-media-buttons .social-media-button.codepen:hover i {
 
 #main aside#sidebar .dark {
   border-radius: 10px;
+  padding-bottom: 40px;
 }
 /*# sourceMappingURL=main.css.map */

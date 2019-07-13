@@ -4,10 +4,260 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Link Academy/Colors</title>
+  <meta name="description" content="Affordable and professional web design">
+	<meta name="keywords" content="web design, affordable web design, professional web design">
+  <meta name="author" content="Bujar Alimadhi">
+  <title>Link Academy | Welcome</title>
+  <link rel="stylesheet" href="main.css" type ="text/css">
+  <link rel="stylesheet" href='https://use.fontawesome.com/releases/v5.7.0/css/all.css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <link rel="stylesheet" href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+
 </head>
 <body>
-  <iframe src="http://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF" height="740px"; width="100%"; frameborder="0"></iframe>
+
+    <script id="script">
+    
+        // you can adjust your screen width
+        // and height until you see it all :D
+        
+        // and yes, this is the only js running
+        
+        var c = document.createElement('canvas'),
+          s,
+          w = c.width = window.innerWidth,
+          h = c.height = window.innerHeight,
+          ctx = c.getContext( '2d' ),
+          opts = {
+            
+            hueSpeed: .2,
+            interval: 60,
+            waitsOnLine: 5,
+            repaintAlpha: .04,
+            font: '10px monospace',
+            lineFont: '10px monospace',
+            lineHeight: 20, //px
+            lineWidth: 475
+            
+          },
+          
+          tick = 0, wait = 0,
+          linesInHeight = h / opts.lineHeight,
+          rainbows = [];
+       
+      function Rainbow(){
+       
+        this.y = 0;
+        this.wait = 0;
+        this.hue = ( tick * opts.hueSpeed ) % 360;
+      }
+      Rainbow.prototype.step = function() {
+        
+        ++this.wait
+        
+        if( this.wait >= opts.waitsOnLine ){
+          
+          ++this.y;
+          this.wait = 0;
+        }
+        
+        ctx.fillStyle = 'hsl(hue,80%,50%)'
+          .replace( 'hue', this.hue );
+        
+        var x = ( ( this.y / linesInHeight ) |0 )
+          * opts.lineWidth,
+            y = ( this.y % linesInHeight )
+          * opts.lineHeight,
+            l = ctx.measureText( this.y ).width;
+        
+        ctx.font = opts.font;
+        ctx.fillText( s[ this.y ], 14 + x, y );
+        
+        ctx.font = opts.lineFont;
+        ctx.fillText( this.y, 9 + x - l, y )
+        
+        if( this.y >= s.length - 1 )
+          this.dead = true;
+      }
+       
+      function init() {
+        
+        s = document.getElementById('script')
+          .textContent.split( '\n' );
+        ctx.font = opts.font;
+        
+        loop();
+      }
+      function loop() {
+        
+        window.requestAnimationFrame( loop );
+        
+        ++tick;
+        ++wait;
+        
+        ctx.fillStyle = 'rgba(0,0,0,alp)'
+          .replace( 'alp', opts.repaintAlpha );
+        ctx.fillRect( 0, 0, w, h );
+        
+        if( wait >= opts.interval ){
+          
+          wait = 0;
+          rainbows.push( new Rainbow );
+        }
+        
+        for( var i = 0; i < rainbows.length; ++i ){
+          
+          rainbows[ i ].step();
+          
+          if( rainbows[ i ].dead ){
+            
+            rainbows.splice( i, 1 );
+            --i;
+          }
+        }
+      }
+       
+      document.body.appendChild( c );
+      window.addEventListener( 'DOMContentLoaded', init );
+      window.addEventListener( 'resize', function() {
+        
+        w = c.width = window.innerWidth;
+        h = c.height = window.innerHeight;
+                                         
+        linesInHeight = h / opts.lineHeight;
+        
+        ctx.fillStyle = 'black';
+        ctx.fillRect( 0, 0, w, h );
+        ctx.font = opts.font;
+      });
+      c.addEventListener( 'click', function(){
+        
+        ctx.fillStyle = 'black';
+        ctx.fillRect( 0, 0, w, h );
+                                            
+        s.reverse();
+        for( var i = 0; i < s.length; ++i )
+          s[ i ] = s[ i ].split('').reverse().join('');
+      })
+      </script>
+
+  <header>
+    <div class="container">
+      <div id="branding">
+        <h1><span class="highlight ">: Link Academy ></span> Web Design</h1>
+      </div>
+        <nav>
+          <ul>
+            <li class="current"><a href="index.html"><i class='fas fa-home'></i>HOME</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><button id="loginbutton" onclick="document.getElementById('id01').style.display='block'"><i class='fas fa-user'></i>Login</button></li>
+          </ul>
+        </nav>
+    </div>
+  </header>
+  <nav id="menuja">
+      <ul class="main">
+        <li>
+          <a href="https://www.w3schools.com/html/" target="_blank">html</a>
+          <ul class="drop menu1">
+            <li><a href="colors.html">colors</a></li>
+            <li><a href="#">news</a></li>
+            <li><a href="#">contact</a></li>
+            <li><a href="#">about</a></li>
+          </ul>
+        </li>
+        <li><a href="#">css</a>
+          <ul class="drop menu2">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">news</a></li>
+            <li><a href="#">contact</a></li>
+            <li><a href="#">about</a></li>
+          </ul>
+        </li>
+        <li><a href="#">javaScript</a>
+          <ul class="drop menu3">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">news</a></li>
+            <li><a href="#">contact</a></li>
+            <li><a href="#">about</a></li>
+          </ul>
+        </li>
+        <li><a href="#">sql</a>
+          <ul class="drop menu4">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">news</a></li>
+            <li><a href="#">contact</a></li>
+            <li><a href="#">about</a></li>
+          </ul>
+        </li>
+        <li><a href="#">php</a>
+          <ul class="drop menu5">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">news</a></li>
+            <li><a href="#">contact</a></li>
+            <li><a href="#">about</a></li>
+          </ul>
+        </li>
+        <li><a href="#">python</a>
+          <ul class="drop menu6">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">news</a></li>
+            <li><a href="#">contact</a></li>
+            <li><a href="#">about</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <!--    LOGIN FORM   -->
+    <div id="id01" class="modal">
+        <div class="wrapper">
+          <div class="wrapper-content">
+              <span onclick="document.getElementById('id01').style.display='none'" 
+              class="close" title="Close Login">&times;</span>
+            <button type="button" class="facebook"><i class="fa fa-facebook"></i></button>
+            <button type="button"><i class="fa fa-github"></i></button>
+           
+            <div class="or-email"><span>Or  via  email</span></div>
+            <form>
+              <input type="text" class="user-email" id="email" placeholder="Email" autocomplete="off"> 
+              <input type="password" class="user-pasword" id="password" placeholder="Password" autocomplete="off">
+            </form>
+            <div class="logout">
+              <input type="submit" value="Login">
+            </div>
+            <a href="#" class="forgot-pass">Forgotten password?</a>
+          </div>
+          
+         </div>
+      </div>
+  
+    <iframe src="http://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF" height="640px"; width="100%"; frameborder="0"></iframe>
+
+    <footer>
+        <div class="container">
+          <p><span class="highlight"> : Link Academy ></span>  Web Design, Copyright &copy; 2019!</p>
+          <div class="media" >
+            <div class="social-media-buttons">
+                <div class="social-media-button facebook">
+                  <a href="https://www.facebook.com/linkacademyalbania.education.digitaltrainings/" target="_blank" title="Link Academy në facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                </div>
+                
+                <div class="social-media-button free-code-camp">
+                  <a href="#"target="_blank" title="Link Academy në free-code-camp"><i class="fa fa-free-code-camp" aria-hidden="true"></i></a>
+                </div>
+                
+                <div class="social-media-button github">
+                  <a href="#"target="_blank" title="Link Academy në github"><i class="fa fa-github" aria-hidden="true"></i></a>
+                </div>
+                
+                <div class="social-media-button codepen">
+                  <a href="#"target="_blank" title="Link Academy në codepen"><i class="fa fa-codepen" aria-hidden="true"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+      </footer>
 </body>
 </html>
 

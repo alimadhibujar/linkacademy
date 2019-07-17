@@ -239,6 +239,10 @@ body #boxes .box {
   border-radius: 10px;
 }
 
+body #boxes .box p {
+  text-align: left;
+}
+
 body #boxes .box img {
   width: 90px;
 }

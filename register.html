@@ -1,38 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="description" content="Affordable and professional web design">
-	  <meta name="keywords" content="web design, affordable web design, professional web design">
-  	<meta name="author" content="Bujar Alimadhi">
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Raleway"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Affordable and professional web design">
+	<meta name="keywords" content="web design, affordable web design, professional web design">
+  <meta name="author" content="Bujar Alimadhi">
+  <title>Link Academy | Welcome</title>
+  <link rel="stylesheet" href="main.css" type ="text/css">
+  <link rel="stylesheet" href='https://use.fontawesome.com/releases/v5.7.0/css/all.css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <link rel="stylesheet" href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
 
-    <link rel="stylesheet" href="css/style.min.css" />
-    <title>Welcome to the DevConnector</title>
-  </head>
-  <body>
-    <nav class="navbar bg-dark">
-      <h1>
-        <a href="dashboard.html"> <i class="fas fa-code"></i> DevConnector </a>
-      </h1>
-      <ul>
-        <li><a href="profiles.html">Developers</a></li>
-        <li><a href="register.html">Register</a></li>
-        <li><a href="login.html">Login</a></li>
-      </ul>
-    </nav>
-    <section class="container">
+</head>
+
+<!--Fundi i Head-it dhe Fillimi i Bodit-->
+<body>
+<script id="script">
+    
+        // you can adjust your screen width
+        // and height until you see it all :D
+        
+        // and yes, this is the only js running
+        
+        var c = document.createElement('canvas'),
+          s,
+          w = c.width = window.innerWidth,
+          h = c.height = window.innerHeight,
+          ctx = c.getContext( '2d' ),
+          opts = {
+            
+            hueSpeed: .2,
+            interval: 60,
+            waitsOnLine: 5,
+            repaintAlpha: .04,
+            font: '10px monospace',
+            lineFont: '10px monospace',
+            lineHeight: 20, //px
+            lineWidth: 475
+            
+          },
+          
+          tick = 0, wait = 0,
+          linesInHeight = h / opts.lineHeight,
+          rainbows = [];
+       
+      function Rainbow(){
+       
+        this.y = 0;
+        this.wait = 0;
+        this.hue = ( tick * opts.hueSpeed ) % 360;
+      }
+      Rainbow.prototype.step = function() {
+        
+        ++this.wait
+        
+        if( this.wait >= opts.waitsOnLine ){
+          
+          ++this.y;
+          this.wait = 0;
+        }
+        
+        ctx.fillStyle = 'hsl(hue,80%,50%)'
+          .replace( 'hue', this.hue );
+        
+        var x = ( ( this.y / linesInHeight ) |0 )
+          * opts.lineWidth,
+            y = ( this.y % linesInHeight )
+          * opts.lineHeight,
+            l = ctx.measureText( this.y ).width;
+        
+        ctx.font = opts.font;
+        ctx.fillText( s[ this.y ], 14 + x, y );
+        
+        ctx.font = opts.lineFont;
+        ctx.fillText( this.y, 9 + x - l, y )
+        
+        if( this.y >= s.length - 1 )
+          this.dead = true;
+      }
+       
+      function init() {
+        
+        s = document.getElementById('script')
+          .textContent.split( '\n' );
+        ctx.font = opts.font;
+        
+        loop();
+      }
+      function loop() {
+        
+        window.requestAnimationFrame( loop );
+        
+        ++tick;
+        ++wait;
+        
+        ctx.fillStyle = 'rgba(0,0,0,alp)'
+          .replace( 'alp', opts.repaintAlpha );
+        ctx.fillRect( 0, 0, w, h );
+        
+        if( wait >= opts.interval ){
+          
+          wait = 0;
+          rainbows.push( new Rainbow );
+        }
+        
+        for( var i = 0; i < rainbows.length; ++i ){
+          
+          rainbows[ i ].step();
+          
+          if( rainbows[ i ].dead ){
+            
+            rainbows.splice( i, 1 );
+            --i;
+          }
+        }
+      }
+       
+      document.body.appendChild( c );
+      window.addEventListener( 'DOMContentLoaded', init );
+      window.addEventListener( 'resize', function() {
+        
+        w = c.width = window.innerWidth;
+        h = c.height = window.innerHeight;
+                                         
+        linesInHeight = h / opts.lineHeight;
+        
+        ctx.fillStyle = 'black';
+        ctx.fillRect( 0, 0, w, h );
+        ctx.font = opts.font;
+      });
+      c.addEventListener( 'click', function(){
+        
+        ctx.fillStyle = 'black';
+        ctx.fillRect( 0, 0, w, h );
+                                            
+        s.reverse();
+        for( var i = 0; i < s.length; ++i )
+          s[ i ] = s[ i ].split('').reverse().join('');
+      })
+      </script>
+      
+      <!--..................Fundi i Scriptit..........-->
+
+      <!--..................Fillimi i Headerit..........-->
+      
+  <header>
+    <div class="container">
+      <div id="branding">
+        <h1><span class="highlight ">: Link Academy ></span> Web Design</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html"><i class='fas fa-home'></i>HOME</a></li>
+          <li><a href="about.html">About</a></li>
+          <li ><button id="loginbutton" class="current" onclick="document.getElementById('id01').style.display='block'"><i class='fas fa-user'></i>Login</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!--..................Fundi i Headerit..........-->
+  <!--..................Fillimi i menuse..........-->
+
+  <nav id="menuja">
+    <ul class="main">
+      <li>
+        <a href="https://www.w3schools.com/html/" target="_blank">html</a>
+        <ul class="drop menu1">
+          <li><a href="colors.html">colors</a></li>
+          <li><a href="#">news</a></li>
+          <li><a href="#">contact</a></li>
+          <li><a href="#">about</a></li>
+        </ul>
+      </li>
+      <li><a href="#">css</a>
+        <ul class="drop menu2">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">news</a></li>
+          <li><a href="#">contact</a></li>
+          <li><a href="#">about</a></li>
+        </ul>
+      </li>
+      <li><a href="#">javaScript</a>
+        <ul class="drop menu3">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">news</a></li>
+          <li><a href="#">contact</a></li>
+          <li><a href="#">about</a></li>
+        </ul>
+      </li>
+      <li><a href="#">sql</a>
+        <ul class="drop menu4">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">news</a></li>
+          <li><a href="#">contact</a></li>
+          <li><a href="#">about</a></li>
+        </ul>
+      </li>
+      <li><a href="#">php</a>
+        <ul class="drop menu5">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">news</a></li>
+          <li><a href="#">contact</a></li>
+          <li><a href="#">about</a></li>
+        </ul>
+      </li>
+      <li><a href="#">python</a>
+        <ul class="drop menu6">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">news</a></li>
+          <li><a href="#">contact</a></li>
+          <li><a href="#">about</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+    
+  <section class="register">
+    <div class="container">
       <h1 class="large text-primary">
         Sign Up
       </h1>
@@ -54,11 +240,12 @@
         <div class="form-group">
           <input type="password" placeholder="Confirm Password" minlength="6" />
         </div>
-        <input type="submit" value="Register" class="btn btn-primary" />
+        <input type="submit" value="Register" class="btn" />
       </form>
       <p class="my-1">
-        Already have an account? <a href="login.html">Sign In</a>
+        Keni llogari te krijuar ? <a href="index.html">Login</a>
       </p>
-    </section>
+    </div>
+  </section>
   </body>
 </html>

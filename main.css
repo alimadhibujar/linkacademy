@@ -818,6 +818,53 @@ body #boxes .box img {
   }
 }
 
+.register {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 387.6px;
+  height: 501.8px;
+  background-color: #272A35;
+  margin: 0px auto;
+  border-radius: 10px;
+  z-index: 3;
+}
+
+.register .form .btn {
+  border: 0;
+  border-radius: 5px;
+  height: 30px;
+  padding-left: 5px;
+  text-align: left;
+  background-color: #1a1c1d;
+  color: #272A35;
+  font-size: 1rem;
+}
+
+.register .form .btn:hover {
+  background-color: #fff;
+}
+
+.register .form .form-group {
+  margin-bottom: 35px;
+}
+
+.register .form .form-group input {
+  border: 0;
+  border-radius: 5px;
+  height: 30px;
+  padding-left: 5px;
+  text-align: left;
+  background-color: #1a1c1d;
+  color: #272A35;
+  font-size: 1rem;
+}
+
+.register .form .form-group input:hover {
+  background-color: #fff;
+}
+
 footer {
   background-color: #130224;
   text-align: center;

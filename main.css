@@ -819,9 +819,6 @@ body #boxes .box img {
 }
 
 .register {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   position: relative;
   width: 387.6px;
   height: 501.8px;

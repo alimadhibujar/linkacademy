@@ -144,7 +144,8 @@
   <header>
     <div class="container">
       <div id="branding">
-        <h1><span class="highlight ">: Link Academy ></span> Web Design</h1>
+        <!--<h1><span class="highlight ">: Link Academy ></span> Web Design</h1>-->
+        <img src="./img/web-logo.png" id = "weblogo">
       </div>
         <nav>
           <ul>
@@ -211,26 +212,60 @@
 
     <!--    LOGIN FORM   -->
     <div id="id01" class="modal">
-        <div class="wrapper">
-          <div class="wrapper-content">
-              <span onclick="document.getElementById('id01').style.display='none'" 
-              class="close" title="Close Login">&times;</span>
-            <button type="button" class="facebook"><i class="fa fa-facebook"></i></button>
-            <button type="button"><i class="fa fa-github"></i></button>
-           
-            <div class="or-email"><span>Or  via  email</span></div>
-            <form>
-              <input type="text" class="user-email" id="email" placeholder="Email" autocomplete="off"> 
-              <input type="password" class="user-pasword" id="password" placeholder="Password" autocomplete="off">
-            </form>
-            <div class="logout">
-              <input type="submit" value="Login">
-            </div>
-            <a href="#" class="forgot-pass">Forgotten password?</a>
+      <div class="wrapper">
+       <span onclick="document.getElementById('id01').style.display='none'" 
+       class="close" title="Close Login">&times;</span>
+       <div id = "login-form" class="wrapper-content">
+         
+       <button type="button" class="facebook"><i class="fa fa-facebook"></i></button>
+       <button type="button"><i class="fa fa-github"></i></button>
+      
+       <div class="or-email"><span>Or  via  email</span></div>
+       <form>
+         <input type="text" class="user-email" id="email" placeholder="Email" autocomplete="off"> 
+         <input type="password" class="user-pasword" id="password" placeholder="Password" autocomplete="off">
+       </form>
+       <div class="logout">
+         <input type="submit" value="Login">
+       </div>
+       <a href="#" class="forgot-pass">Forgotten password?</a>
+       <p class="my-1">
+         Nuk keni Llogari ! <a href="#" id="sign-up">Regjistrohu</a>
+       </p>
+     </div>
+     <div id="register">
+      <div class="wrapper-content">
+        <h1 class="large text-primary">
+        Sign Up
+        </h1>
+        <p class="lead"><i class="fas fa-user"></i> Create Your Account</p>
+        <form action="dashboard.html" class="form">
+          <div class="form-group">
+            <input type="text" placeholder="Name" required />
           </div>
-          
-         </div>
+          <div class="form-group">
+            <input type="email" placeholder="Email Address" />
+            <small class="form-text">
+            This site uses Gravatar, so if you want a profile image, use a
+            Gravatar email
+          </small>
+          </div>
+          <div class="form-group">
+            <input type="password" placeholder="Password" minlength="6" />
+          </div>
+          <div class="form-group">
+            <input type="password" placeholder="Confirm Password" minlength="6" />
+          </div>
+            <input type="submit" value="Register" class="btn" />
+        </form>
+          <p class="my-1">
+            Keni llogari te krijuar ! <a href="#"id = "back-to-login">Login</a>
+          </p>
       </div>
+    </div>
+     
+  </div>
+</div>
   
     <iframe src="http://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF" height="640px"; width="100%"; frameborder="0"></iframe>
 
@@ -258,6 +293,7 @@
             </div>
           </div>
       </footer>
+      <script src="myscript.js"></script>
 </body>
 </html>
 

@@ -1,0 +1,41 @@
+@mixin box {
+  float:left;
+  text-align: center;
+  width:20%;
+  height: 380px;
+  padding: 15px 3px 0px 9px;
+  background-color:$color10;
+  color:#636363;
+  border-radius: 10px;
+  p{
+  text-align:left;
+  @media only screen and (max-width: 768px) {
+    width: 90%;
+    margin: 15px auto;
+    padding-bottom: 15px;
+      } 
+    }
+          
+  img{
+  width:90px;
+    }
+  @media only screen and (max-width: 1250px) {
+    padding-bottom: 25px;
+    } 
+  @media only screen and (max-width: 768px) {
+    float: none;
+    width: 100%;
+    display: block;
+    height: auto;
+    margin: 0;
+    padding: 15px 0 0 0;
+    }
+}
+
+@mixin overlayContent {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  position: absolute;
+  width: 100vw;
+}

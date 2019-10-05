@@ -23,9 +23,28 @@ ul {
 .dark {
   padding: 15px;
   background: #1C201A;
-  color: #35424a;
+  color: #636363;
   margin-top: 0px;
   margin-bottom: 10px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.dark p {
+  text-align: left;
+}
+
+@media only screen and (max-width: 768px) {
+  .dark p {
+    width: 90%;
+    margin: 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .dark {
+    padding: 7px 0 7px;
+  }
 }
 
 /* Header */
@@ -100,15 +119,21 @@ header nav li #loginbutton:hover {
 
 header #branding {
   float: left;
+  margin-top: 20px;
 }
 
 header #branding h1 {
-  margin: 0 0 15px 0;
+  margin-bottom: 15px;
   font-family: "Tangerine";
   font-size: 3.5rem;
   background-color: black;
   text-shadow: #5a696f 4px 4px 6px;
   opacity: 0.7;
+}
+
+header #branding #weblogo {
+  max-width: 100%;
+  height: auto;
 }
 
 header #branding .highlight {
@@ -129,7 +154,7 @@ body canvas {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: black;
+  background-color: #14073A;
   z-index: -1;
 }
 
@@ -145,10 +170,26 @@ body #showcase {
           align-items: center;
   text-align: center;
   color: #ffffff;
-  position: absolute;
-  top: 170px;
-  height: 320px;
+  position: relative;
+  max-height: 320px;
   width: 100vw;
+}
+
+body #showcase video {
+  width: 550px;
+  height: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  body #showcase video {
+    width: 500px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body #showcase video {
+    width: 480px;
+  }
 }
 
 body #showcase .overlay {
@@ -170,7 +211,7 @@ body #showcase .content {
           transform: translate(-50%, -50%);
   position: absolute;
   width: 100vw;
-  height: 320px;
+  height: auto;
   z-index: 1;
   opacity: 0.7;
 }
@@ -178,36 +219,55 @@ body #showcase .content {
 body #showcase .content h1 {
   padding-right: 60px;
   margin-top: 20px;
-  font-size: 4em;
+  font-size: 4rem;
   color: #f4f4f4;
   font-family: "Tangerine";
   text-shadow: 3px 2px 0px rgba(255, 255, 255, 0.45), 9px 8px 0px rgba(0, 0, 0, 0.15);
 }
 
+@media only screen and (max-width: 768px) {
+  body #showcase .content h1 {
+    font-size: 3rem;
+    margin-top: 20px;
+  }
+}
+
 body #showcase .content p {
-  margin: 145px 0px 0px;
-  font-size: 2rem;
+  margin: 0;
+  padding-top: 100px;
+  font-size: 1.9rem;
   font-family: "Tangerine";
 }
 
+@media only screen and (max-width: 768px) {
+  body #showcase .content p {
+    font-size: 1.7rem;
+  }
+}
+
+@media only screen and (max-width: 636px) {
+  body #showcase .content p {
+    font-size: 1.4rem;
+  }
+}
+
 body #newsletter {
-  margin-top: 325px;
-  padding: 5px 15px 0px;
   color: #ffffff;
   opacity: 0.7;
 }
 
 body #newsletter h1 {
   float: left;
-  margin-top: 0;
+  margin: 8px 0 6px;
   font-size: 1.4em;
   font-weight: normal;
   background-color: black;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 body #newsletter form {
   float: right;
+  padding-top: 9px;
 }
 
 body #newsletter form input {
@@ -218,9 +278,29 @@ body #newsletter form input {
   width: 250px;
 }
 
+@media only screen and (max-width: 768px) {
+  body #newsletter form input {
+    height: 32px;
+    margin: 0 0 7px;
+    padding: 0px;
+  }
+}
+
 body #newsletter form .button_1 {
   border-radius: 5px;
   margin-left: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  body #newsletter form .button_1 {
+    margin: 0 0 6px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body #newsletter form {
+    padding-top: 0px;
+  }
 }
 
 body #boxes {
@@ -232,10 +312,10 @@ body #boxes .box {
   text-align: center;
   width: 20%;
   height: 380px;
-  margin: 0px 20px;
+  margin: 0px  2.45% 10px 0;
   padding: 15px 3px 0px 9px;
   background-color: #1C201A;
-  color: #35424a;
+  color: #636363;
   border-radius: 10px;
 }
 
@@ -243,8 +323,168 @@ body #boxes .box p {
   text-align: left;
 }
 
+@media only screen and (max-width: 768px) {
+  body #boxes .box p {
+    width: 90%;
+    margin: 15px auto;
+    padding-bottom: 15px;
+  }
+}
+
 body #boxes .box img {
   width: 90px;
+}
+
+@media only screen and (max-width: 1250px) {
+  body #boxes .box {
+    padding-bottom: 25px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body #boxes .box {
+    float: none;
+    width: 100%;
+    display: block;
+    height: auto;
+    margin: 0;
+    padding: 15px 0 0 0;
+  }
+}
+
+body #boxes .box-1 {
+  float: left;
+  text-align: center;
+  width: 20%;
+  height: 380px;
+  margin: 0px  2.45% 10px;
+  padding: 15px 3px 0px 9px;
+  background-color: #1C201A;
+  color: #636363;
+  border-radius: 10px;
+}
+
+body #boxes .box-1 p {
+  text-align: left;
+}
+
+@media only screen and (max-width: 768px) {
+  body #boxes .box-1 p {
+    width: 90%;
+    margin: 15px auto;
+    padding-bottom: 15px;
+  }
+}
+
+body #boxes .box-1 img {
+  width: 90px;
+}
+
+@media only screen and (max-width: 1250px) {
+  body #boxes .box-1 {
+    padding-bottom: 25px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body #boxes .box-1 {
+    float: none;
+    width: 100%;
+    display: block;
+    height: auto;
+    margin: 0;
+    padding: 15px 0 0 0;
+  }
+}
+
+body #boxes .box-2 {
+  float: left;
+  text-align: center;
+  width: 20%;
+  height: 380px;
+  margin: 0px  2.45% 10px;
+  padding: 15px 3px 0px 9px;
+  background-color: #1C201A;
+  color: #636363;
+  border-radius: 10px;
+}
+
+body #boxes .box-2 p {
+  text-align: left;
+}
+
+@media only screen and (max-width: 768px) {
+  body #boxes .box-2 p {
+    width: 90%;
+    margin: 15px auto;
+    padding-bottom: 15px;
+  }
+}
+
+body #boxes .box-2 img {
+  width: 90px;
+}
+
+@media only screen and (max-width: 1250px) {
+  body #boxes .box-2 {
+    padding-bottom: 25px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body #boxes .box-2 {
+    float: none;
+    width: 100%;
+    display: block;
+    height: auto;
+    margin: 0;
+    padding: 15px 0 0 0;
+  }
+}
+
+body #boxes .box-3 {
+  float: left;
+  text-align: center;
+  width: 20%;
+  height: 380px;
+  margin: 0px 0 10px 2.45%;
+  padding: 15px 3px 0px 9px;
+  background-color: #1C201A;
+  color: #636363;
+  border-radius: 10px;
+}
+
+body #boxes .box-3 p {
+  text-align: left;
+}
+
+@media only screen and (max-width: 768px) {
+  body #boxes .box-3 p {
+    width: 90%;
+    margin: 15px auto;
+    padding-bottom: 15px;
+  }
+}
+
+body #boxes .box-3 img {
+  width: 90px;
+}
+
+@media only screen and (max-width: 1250px) {
+  body #boxes .box-3 {
+    padding-bottom: 25px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body #boxes .box-3 {
+    float: none;
+    width: 100%;
+    display: block;
+    height: auto;
+    margin: 0;
+    padding: 15px 0 0 0;
+  }
 }
 
 #menuja {
@@ -277,7 +517,8 @@ body #boxes .box img {
 
 #menuja .main li a {
   border-left: 1px solid black;
-  border-bottom: 2px solid black;
+  border-right: 1px solid black;
+  border-bottom: 2px solid rgba(23, 23, 50, 0.7);
   border-radius: 5px;
   text-decoration: none;
   color: #ffffff;
@@ -285,7 +526,7 @@ body #boxes .box img {
   text-transform: capitalize;
   font-family: monospace;
   display: block;
-  padding: 10px 25px;
+  padding: 7px 25px;
   font-size: 16px;
   -webkit-transition: background-color 0.5s ease-in-out;
   transition: background-color 0.5s ease-in-out;
@@ -293,7 +534,7 @@ body #boxes .box img {
 }
 
 #menuja .main li a:hover {
-  background-color: #631818;
+  background-color: #4E2E9D;
 }
 
 #menuja .main li .drop li {
@@ -303,9 +544,13 @@ body #boxes .box img {
 }
 
 #menuja .main li .drop li a {
-  background-color: rgba(23, 23, 50, 0.7);
+  background-color: black;
   padding: 10px 0;
   border-radius: 5px;
+}
+
+#menuja .main li .drop li a:hover {
+  background-color: #4E2E9D;
 }
 
 #menuja .main li:hover .menu1 li:first-of-type {
@@ -664,23 +909,65 @@ body #boxes .box img {
   width: 100%;
 }
 
+.modal .wrapper #register .form .btn {
+  width: 50%;
+  border: 0;
+  border-radius: 5px;
+  height: 30px;
+  padding-left: 5px;
+  text-align: center;
+  background-color: #1a1c1d;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.modal .wrapper #register .form .btn:hover {
+  color: blue;
+  background-color: #fff;
+}
+
+.modal .wrapper #register .form .form-group {
+  width: 90%;
+  margin: 0 auto 20px;
+}
+
+.modal .wrapper #register .form .form-group input {
+  width: 90%;
+  border: 0;
+  border-radius: 5px;
+  height: 30px;
+  padding-left: 10px;
+  text-align: left;
+  background-color: #1a1c1d;
+  color: #272A35;
+  font-size: 1rem;
+}
+
+.modal .wrapper #register .form .form-group input:hover {
+  background-color: #fff;
+}
+
 .modal .wrapper-content {
   position: relative;
   width: 25%;
-  margin: 110px auto;
+  margin: 170px auto;
   background: #35394a;
   border-radius: 10px;
-  /* Old browsers */
-  /* FF3.6+ */
-  /* Chrome,Safari4+ */
-  /* Chrome10+,Safari5.1+ */
-  /* Opera 11.10+ */
-  /* IE10+ */
   background: linear-gradient(45deg, #35394a 0%, #1f222e 100%);
-  /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#35394a', endColorstr='#1f222e',GradientType=1 );
-  /* IE6-9 fallback on horizontal gradient */
   padding: 20px 30px;
+}
+
+@media only screen and (max-width: 920px) {
+  .modal .wrapper-content {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .modal .wrapper-content {
+    width: 50%;
+  }
 }
 
 .modal .wrapper-content button {
@@ -746,16 +1033,18 @@ body #boxes .box img {
 
 .modal .user-pasword:hover {
   background-color: #272a2c;
+  border-radius: 10px;
 }
 
 .modal .user-email:hover {
   background-color: #272a2c;
+  border-radius: 10px;
 }
 
 .modal input {
   border: 0;
   width: 100%;
-  height: 68px;
+  height: 65px;
   background-color: transparent;
 }
 
@@ -797,13 +1086,19 @@ body #boxes .box img {
   color: #606479;
 }
 
+.modal .my-1 a {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
 .modal .close {
   /* Position it in the top right corner outside of the modal */
   position: absolute;
-  right: 10px;
-  top: 0;
+  right: 15px;
+  top: 5px;
   color: #cccccc;
   font-size: 25px;
+  z-index: 3;
 }
 
 .modal .close:hover,
@@ -818,50 +1113,6 @@ body #boxes .box img {
   }
 }
 
-.register {
-  position: relative;
-  width: 387.6px;
-  height: 501.8px;
-  background-color: #272A35;
-  margin: 0px auto;
-  border-radius: 10px;
-  z-index: 3;
-}
-
-.register .form .btn {
-  border: 0;
-  border-radius: 5px;
-  height: 30px;
-  padding-left: 5px;
-  text-align: left;
-  background-color: #1a1c1d;
-  color: #272A35;
-  font-size: 1rem;
-}
-
-.register .form .btn:hover {
-  background-color: #fff;
-}
-
-.register .form .form-group {
-  margin-bottom: 35px;
-}
-
-.register .form .form-group input {
-  border: 0;
-  border-radius: 5px;
-  height: 30px;
-  padding-left: 5px;
-  text-align: left;
-  background-color: #1a1c1d;
-  color: #272A35;
-  font-size: 1rem;
-}
-
-.register .form .form-group input:hover {
-  background-color: #fff;
-}
-
 footer {
   background-color: #130224;
   text-align: center;
@@ -869,16 +1120,28 @@ footer {
 
 footer p {
   float: left;
-  margin-top: 3rem;
-  letter-spacing: 1px;
+  margin: 1rem 0 0;
+  letter-spacing: 0.6px;
   color: #ffffff;
   font-family: "Mr De Haviland";
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   opacity: 0.8;
 }
 
+footer p img {
+  width: 68px;
+  height: 42px;
+  margin: 1rem 0 0;
+}
+
+@media only screen and (max-width: 768px) {
+  footer {
+    padding-bottom: 10px;
+  }
+}
+
 footer .highlight {
-  color: #6405E2;
+  color: #B61562;
 }
 
 footer .social-media-buttons {
@@ -938,29 +1201,94 @@ footer .social-media-buttons .social-media-button.codepen:hover i {
 }
 
 /* Media Queries */
+@media (max-width: 1200px) {
+  header #weblogo {
+    width: 360px;
+    height: auto;
+    margin-top: 10px;
+  }
+  header nav li {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 920px) {
+  header #weblogo {
+    width: 306px;
+    height: auto;
+    margin-top: 5px;
+  }
+  header nav li {
+    padding: 0 10px;
+  }
+}
+
 @media (max-width: 768px) {
   header #branding,
   header nav,
   header nav li,
   #newsletter h1,
   #newsletter form,
-  #boxes .box,
+  #boxes.box,
+  #boxes.box-1,
+  #boxes.box-2,
+  #boxes.box-3,
   article#main-col,
-  aside#sidebar {
+  aside#sidebar,
+  footer .social-media-buttons,
+  footer p {
     float: none;
     text-align: center;
     width: 100%;
   }
-  header {
-    padding-bottom: 20px;
+  header #branding {
+    margin: 0;
+    padding-bottom: 15px;
+  }
+  header #branding #weblogo {
+    float: none;
+    width: 360px;
+    height: auto;
+    margin: 0;
+  }
+  header nav {
+    float: none;
+    margin: 0;
+    padding-bottom: 10px;
+  }
+  header nav li {
+    padding: 0 20px;
+  }
+  #showcase {
+    margin-top: 0px;
   }
   #newsletter button, .quote button {
     display: block;
     width: 100%;
   }
+  #newsletter h1 {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding-top: 0px;
+  }
+  #newsletter .button_1 {
+    display: block;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 5px;
+  }
   #newsletter form input[type="email"], .quote input, .quote textarea {
     width: 100%;
     margin-bottom: 5px;
+  }
+  footer .social-media-buttons,
+  footer p {
+    margin: 0;
+  }
+  footer .social-media-buttons img,
+  footer p img {
+    margin: 0;
   }
 }
 
@@ -987,7 +1315,13 @@ footer .social-media-buttons .social-media-button.codepen:hover i {
 #main article#main-col {
   float: left;
   width: 65%;
-  border-radius: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  #main article#main-col {
+    float: none;
+    width: 100%;
+  }
 }
 
 #main aside#sidebar {
@@ -996,7 +1330,25 @@ footer .social-media-buttons .social-media-button.codepen:hover i {
 }
 
 #main aside#sidebar .dark {
-  border-radius: 10px;
   padding-bottom: 40px;
+}
+
+@media only screen and (max-width: 1265px) {
+  #main aside#sidebar .dark {
+    padding-bottom: 0.03em;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #main aside#sidebar .dark {
+    padding-bottom: 5px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #main aside#sidebar {
+    float: none;
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=main.css.map */

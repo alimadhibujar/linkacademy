@@ -17,25 +17,62 @@
 
 .modal .wrapper {
   width: 100%;
+  #register{
+    .form{
+      .btn{
+        width: 50%;
+        border: 0;
+        border-radius: 5px;
+        height: 30px;
+        padding-left: 5px;
+        text-align: center;
+        background-color:#1a1c1d;
+        color:#fff ;
+        font-size: 1rem;
+      }
+      .btn:hover{
+        color: blue;
+        background-color:#fff;
+      }
+      .form-group{
+        width: 90%;
+        margin:0 auto 20px;
+        input{
+        width: 90%;
+        border: 0;
+        border-radius: 5px;
+        height: 30px;
+        padding-left: 10px;
+        text-align: left;
+        background-color:#1a1c1d;
+        color: #272A35;
+        font-size: 1rem;
+        }
+        input:hover{
+        background-color:#fff;
+        }
+      
+      }
+    }
+    
+  }
 }
 
 .modal .wrapper-content {
   position: relative;
   width: 25%;
-  margin: 110px auto;
+  margin: 170px auto;
   background: #35394a;
   border-radius: 10px;
-  /* Old browsers */
-  /* FF3.6+ */
-  /* Chrome,Safari4+ */
-  /* Chrome10+,Safari5.1+ */
-  /* Opera 11.10+ */
-  /* IE10+ */
   background: linear-gradient(45deg, #35394a 0%, #1f222e 100%);
-  /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#35394a', endColorstr='#1f222e',GradientType=1 );
-  /* IE6-9 fallback on horizontal gradient */
   padding: 20px 30px;
+  @media only screen and (max-width: 920px) {
+    width: 40%;
+  } 
+  @media only screen and (max-width: 600px) {
+    width: 50%;
+  } 
 }
 
 .modal .wrapper-content button {
@@ -101,16 +138,18 @@
 
 .modal .user-pasword:hover {
   background-color: #272a2c;
+  border-radius: 10px;
 }
 
 .modal .user-email:hover {
   background-color: #272a2c;
+  border-radius: 10px;
 }
 
 .modal input {
   border: 0;
   width: 100%;
-  height: 68px;
+  height: 65px;
   background-color: transparent;
 }
 
@@ -151,14 +190,18 @@
   padding: 0 30px 0 56px;
   color: #606479;
 }
+.modal .my-1 a{
+  font-size: 1rem;
+  font-weight: 700;
+}
 
 .modal .close {
-  /* Position it in the top right corner outside of the modal */
   position: absolute;
-  right: 10px;
-  top: 0;
+  right: 15px;
+  top: 5px;
   color: #cccccc;
   font-size: 25px;
+  z-index: 3;
 }
 
 .modal .close:hover,

@@ -12,14 +12,13 @@
   <link rel="stylesheet" href='https://use.fontawesome.com/releases/v5.7.0/css/all.css'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
   <link rel="stylesheet" href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
-
+  
 </head>
 
 <!--Fundi i Head-it dhe Fillimi i Bodit-->
 <body>
 <script id="script">
-    
-        // you can adjust your screen width
+          // you can adjust your screen width
         // and height until you see it all :D
         
         // and yes, this is the only js running
@@ -140,7 +139,9 @@
         for( var i = 0; i < s.length; ++i )
           s[ i ] = s[ i ].split('').reverse().join('');
       })
-      </script>
+</script>
+
+
       
       <!--..................Fundi i Scriptit..........-->
 
@@ -149,13 +150,14 @@
   <header>
     <div class="container">
       <div id="branding">
-        <h1><span class="highlight ">: Link Academy ></span> Web Design</h1>
+        <!--<h1><span class="highlight ">: Link Academy ></span> Web Design</h1>-->
+        <img src="./img/web-logo.png" id = "weblogo">
       </div>
       <nav>
         <ul>
           <li class="current"><a href="index.html"><i class='fas fa-home'></i>HOME</a></li>
           <li><a href="about.html">About</a></li>
-          <li><button id="loginbutton" onclick="document.getElementById('id01').style.display='block'"><i class='fas fa-user'></i>Login</button></li>
+          <li><button id="loginbutton"><i class='fas fa-user'></i>Log in</button></li>
         </ul>
       </nav>
     </div>
@@ -219,8 +221,11 @@
   
   <section id="showcase">
     
-    <video src="img/bgvideo.mp4"  autoplay ="true"  loop = "true" width="550px" height="320px"></video>
+    <video autoplay muted loop poster="bgvideo.gif">
+      <source  src="img/bgvideo.mp4" type ="video/mp4">
+    </video>
     
+      
     <div class="overlay"></div>
     
     <div class="content">
@@ -228,30 +233,62 @@
       <p>Ofrojmë falas një formim cilësor, i cili ndryshon jetën e kujtdo që ëndërron një nga profesionet e së ardhmes.</p>
     </div>
      <!--    LOGIN FORM   -->
-     <div id="id01" class="modal">
-      <div class="wrapper">
-        <div class="wrapper-content">
-            <span onclick="document.getElementById('id01').style.display='none'" 
-            class="close" title="Close Login">&times;</span>
-          <button type="button" class="facebook"><i class="fa fa-facebook"></i></button>
-          <button type="button"><i class="fa fa-github"></i></button>
-         
-          <div class="or-email"><span>Or  via  email</span></div>
-          <form>
-            <input type="text" class="user-email" id="email" placeholder="Email" autocomplete="off"> 
-            <input type="password" class="user-pasword" id="password" placeholder="Password" autocomplete="off">
-          </form>
-          <div class="logout">
-            <input type="submit" value="Login">
-          </div>
-          <a href="#" class="forgot-pass">Forgotten password?</a>
-          <p class="my-1">
-            Nuk jeni të Regjisturar ? <a href="register.html">Regjistrohu</a>
-          </p>
-        </div>
+    <div id="id01" class="modal">
+    <div class="wrapper">
+      
+    <div id = "login-form" class="wrapper-content">
+        <span class="close" title="Close Login">&times;</span>
+        
+      <button type="button" class="facebook"><i class="fa fa-facebook"></i></button>
+      <button type="button"><i class="fa fa-github"></i></button>
+     
+      <div class="or-email"><span>Or  via  email</span></div>
+      <form>
+        <input type="text" class="user-email" id="email" placeholder="Email" autocomplete="off"> 
+        <input type="password" class="user-pasword" id="password" placeholder="Password" autocomplete="off">
+      </form>
+      <div class="logout">
+        <input type="submit" value="Login">
       </div>
-    </div> 
-   </section>
+      <a href="#" class="forgot-pass">Forgotten password?</a>
+      <p class="my-1">
+        Nuk keni Llogari ! <a href="#" id="sign-up">Regjistrohu</a>
+      </p>
+    </div>
+    <div id="register">
+      <div class="wrapper-content">
+          <span class="close" title="Close Login">&times;</span>
+        <h1 class="large text-primary">
+        Sign Up
+        </h1>
+        <p class="lead"><i class="fas fa-user"></i> Create Your Account</p>
+        <form action="dashboard.html" class="form">
+          <div class="form-group">
+            <input type="text" placeholder="Name" required />
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Email Address" />
+            <small class="form-text">
+            This site uses Gravatar, so if you want a profile image, use a
+            Gravatar email
+          </small>
+          </div>
+          <div class="form-group">
+            <input type="password" placeholder="Password" minlength="6" />
+          </div>
+          <div class="form-group">
+            <input type="password" placeholder="Confirm Password" minlength="6" />
+          </div>
+            <input type="submit" value="Register" class="btn" />
+        </form>
+          <p class="my-1">
+            Keni llogari te krijuar ! <a href="#"id = "back-to-login">Login</a>
+          </p>
+      </div>
+    </div>  
+    </div>
+  </div> 
+  </section>
   
   <section id="newsletter">
     <div class="container">
@@ -265,7 +302,7 @@
   
   <section id="boxes">
     <div class="container">
-      <div class="box">
+      <div class="box" >
         <img src="./img/logo_html.png">
         <h3>HTML5 Markup</h3>
         <p>What is HTML? <br/>HTML stands for Hyper Text Markup Language.
@@ -273,29 +310,27 @@
           HTML elements are the building blocks of HTML pages
           HTML elements are represented by tags.</p>
       </div>
-      <div class="box">
+      <div class="box-1">
         <img src="./img/logo_css.png">
         <h3>CSS3 Styling</h3>
         <p>CSS stands for Cascading Style Sheets.
           CSS describes how HTML elements are suppose to be displayed on screen.CSS is a language that describes the style of an HTML document.
-
           CSS describes how HTML elements should be displayed.</p>
       </div>
-      <div class="box">
+      <div class="box-2">
         <img src="./img/logo_js.png">
         <h3>JavaScript</h3>
         <p>JavaScript is one of the 3 languages all web developers must learn. HTML to define the content of web pages. CSS to specify the layout of web pages. JavaScript to program the behavior of web pages.JavaScript is easy to learn.</p>
       </div>
-      <div class="box">
+      <div class="box-3" >
         <img src="./img/logo_brush.png">
         <h3>Graphic Design</h3>
-        <p>Learn Graphic Design. The art or skill of combining text and pictures in advertisements, magazines, or books.Graphic design is the process of visual communication and problem-solving through the use of typography, photography, and illustration.</p>
+        <p>Graphic Design is the art of combining text and pictures in advertisements, magazines, or books. Graphic design is the process of visual communication and problem-solving through the use of typography, photography, and illustration.</p>
       </div>
     </div>
   </section>
   <footer>
     <div class="container">
-      <p><span class="highlight"> : Link Academy ></span>  Web Design, Copyright &copy; 2019!</p>
       <div class="media" >
         <div class="social-media-buttons">
             <div class="social-media-button facebook">
@@ -315,8 +350,9 @@
             </div>
           </div>
         </div>
+        <p><img src="./img/logo1.png"><span class="highlight"> : Link Academy ></span>  Web Design, Copyright &copy; 2019!</p>
       </div>
   </footer>
-   
+  <script src="myscript.js"></script>
 </body>
 </html>

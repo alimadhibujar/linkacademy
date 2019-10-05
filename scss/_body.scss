@@ -10,7 +10,7 @@ body{
     position: absolute;
     top: 0;
     left: 0;
-    background-color:black;
+    background-color:#14073A;
     z-index: -1;
   }
   
@@ -20,29 +20,29 @@ body{
     align-items: center;
     text-align:center;
     color:#ffffff;
-    position:absolute;
-    top:170px;
-    height:320px;
+    position:relative;
+    max-height:320px;
     width:100vw;
+   
+    video{
+    width: 550px;
+    height: auto;
+    @media only screen and (max-width: 768px) {
+      width: 480px;
+      } 
+    }
+
     
       .overlay{
-      top: 50%;
-      left: 50%;
-      transform: translate(-50% , -50%);
-      position: absolute;
-      width: 100vw;
-      height:320px;
+      @include overlayContent;
+      height: 320px;
       background-color:#001524;
       opacity:0.5;
       }
       
       .content{
-      top: 50%;
-      left: 50%;
-      transform: translate(-50% , -50%);
-      position: absolute;
-      width:100vw;
-      height:320px;
+      @include overlayContent;
+      height:auto;
       z-index:1;
       opacity: 0.7;
   
@@ -50,17 +50,28 @@ body{
     
       h1{
       padding-right: 60px;
-      margin-top:20px;
-      font-size:4em;
+      margin-top: 20px;
+      font-size:4rem;
       color: $color1;
       font-family: $font2;
       text-shadow: 3px 2px 0px rgba(255,255,255,0.45), 9px 8px 0px rgba(0,0,0,0.15);
+      @media only screen and (max-width: 768px) {
+        font-size:3rem;
+        margin-top: 20px;
+        }
       }
   
       p{
-      margin:145px 0px 0px;  
-      font-size:2rem;
+      margin:0;
+      padding-top:100px;  
+      font-size:1.9rem;
       font-family: $font2;
+      @media only screen and (max-width: 768px) {
+        font-size:1.7rem;
+        }
+      @media only screen and (max-width: 636px) {
+        font-size:1.4rem;
+        }           
       }
     }
     
@@ -68,58 +79,70 @@ body{
   
   
     #newsletter{
-    margin-top: 325px;
-    padding: 5px 15px 0px;
     color:#ffffff;
     opacity: 0.7;
     
-    
     h1{
     float:left;
-    margin-top: 0;
+    margin: 8px 0 6px;
     font-size: 1.4em;
     font-weight: normal;
     background-color: black;
-    opacity: 0.8;
+    opacity: 0.9;        
     }
     
     form{
       float:right;
+      padding-top: 9px;
       input{
       border: 0px;
       border-radius:5px;
       padding:4px;
       height:25px;
       width:250px;
-       }
+      @media only screen and (max-width: 768px) {
+        height: 32px;
+        margin:0 0 7px;
+        padding: 0px;
+        }
+      }
   
       .button_1{
       border-radius: 5px;
-      margin-left: 10px; 
+      margin-left: 10px;
+      @media only screen and (max-width: 768px) {
+        margin: 0 0 6px;
+        }
+      }
+    @media only screen and (max-width: 768px) {
+      padding-top: 0px;
       }
     }
   }
   
-  #boxes{ 
-      
+  #boxes{  
     background-color:#000B18;
-      .box{
-      float:left;
-      text-align: center;
-      width:20%;
-      height: 380px;
-      margin:0px 20px;
-      padding: 15px 3px 0px 9px;
-      background-color:$color10;
-      color:$color2;
-      border-radius: 10px;
-      p{
-        text-align:left;
+      
+    .box{
+      @include box;
+      margin:0px  2.45% 10px 0;
       }
-    }
+    
+    .box-1{
+      @include box; 
+      margin: 0px  2.45% 10px;
+      }
 
-    .box img{
-      width:90px;
-    }
-  } 
+    .box-2{
+      @include box;
+      margin:0px  2.45% 10px;
+      }
+            
+    .box-3{
+      @include box;
+      margin:0px 0 10px 2.45%;
+      }
+    
+  }
+ 
 }

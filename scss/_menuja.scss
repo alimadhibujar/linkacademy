@@ -12,11 +12,10 @@
     
     li {
       list-style: none;
-        } 
       a{
         border-left: 1px solid black;
         border-right: 1px solid black;
-        border-bottom:2px solid rgba(23, 23, 50, 0.7);
+        border-bottom:2px solid rgba(23, 23, 50, 0.7);;
         border-radius: 5px;
         text-decoration: none;
         color: #ffffff;
@@ -24,10 +23,11 @@
         text-transform: capitalize;
         font-family: monospace;
         display: block;
-        padding: 7px 25px;
+        padding: 7px 20px;
         font-size: 16px;
         transition: background-color 0.5s ease-in-out;
         font-family: "Raleway", sans-serif;
+      }
       a:hover {
         background-color: #4E2E9D;
       }
@@ -42,7 +42,6 @@
         a:hover{
           background-color: #4E2E9D;
         }
-
         
       }
 

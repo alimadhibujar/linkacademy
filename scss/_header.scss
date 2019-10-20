@@ -40,7 +40,7 @@ header{
 
     li{
     display:inline;
-    padding: 0 20px;
+    padding: 0 0.75rem;
     background-color: black;
     opacity: 0.7;
     #loginbutton{
@@ -51,20 +51,23 @@ header{
     font-size:20px;
     border:0px;
     i{
-      font-size:1rem;
-      margin:0px 5px;
-    }
+    font-size:1rem;
+    margin:0px 5px;
       }
+    }
     #loginbutton:hover{
     color:#cccccc;
     font-weight:bold;
+      }
     }
-  }
-}
+    }
  
-  #branding{
-  float:left;
-  margin-top: 20px;
+    #branding{
+    float:left;
+    margin-top: 20px;
+    @media only screen and (max-width: 1100px){
+      margin-top: 30px;
+    }
     h1{
     margin-bottom: 15px;
     font-family: $font2;
@@ -73,10 +76,13 @@ header{
     text-shadow: rgb(90, 105, 111) 4px 4px 6px;
     opacity: 0.7;
 
-    }
+      }
     #weblogo{
       max-width: 100%;
       height:auto;
+      @media only screen and (max-width: 1100px){
+        max-width: 362px;
+      }
     }
   
     .highlight{
@@ -84,5 +90,7 @@ header{
     font-weight:bold; 
     padding: 0 5px 0 5px;
               }
-  }
+    }
+  
+
 }

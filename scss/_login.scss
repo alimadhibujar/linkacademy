@@ -35,8 +35,7 @@
         background-color:#fff;
       }
       .form-group{
-        width: 90%;
-        margin:0 auto 20px;
+        margin-bottom: 20px;
         input{
         width: 90%;
         border: 0;
@@ -51,6 +50,10 @@
         input:hover{
         background-color:#fff;
         }
+        .form-text{
+          padding-left: 10px;
+          width: 90%;
+        }
       
       }
     }
@@ -64,15 +67,17 @@
   margin: 170px auto;
   background: #35394a;
   border-radius: 10px;
+  /* Old browsers */
+  /* FF3.6+ */
+  /* Chrome,Safari4+ */
+  /* Chrome10+,Safari5.1+ */
+  /* Opera 11.10+ */
+  /* IE10+ */
   background: linear-gradient(45deg, #35394a 0%, #1f222e 100%);
+  /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#35394a', endColorstr='#1f222e',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
   padding: 20px 30px;
-  @media only screen and (max-width: 920px) {
-    width: 40%;
-  } 
-  @media only screen and (max-width: 600px) {
-    width: 50%;
-  } 
 }
 
 .modal .wrapper-content button {
@@ -208,10 +213,4 @@
 .modal .close:focus {
   color:red;
   cursor: pointer;
-}
-
-@media (max-width: 1170px) {
-  .wrapper-content {
-    width: 65%;
-  }
 }

@@ -100,7 +100,7 @@ header nav li #loginbutton:hover {
 
 header #branding {
   float: left;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 @media only screen and (max-width: 1100px) {
@@ -1100,36 +1100,39 @@ form button.button_1 {
   footer .container p {
     padding-bottom: 10px;
   }
-  #main article#main-col {
-    float: none;
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 0;
-  }
-  #main article#main-col h1.dark {
-    padding-top: 15px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-  }
-  #main article#main-col p {
-    padding: 0 10px 10px 10px;
-    text-align: left;
-  }
-  #main aside#sidebar {
-    float: none;
-    width: 100%;
-    margin-bottom: 10px;
-  }
-  #main aside#sidebar .dark {
-    padding-bottom: 10px;
-  }
-  #main aside#sidebar .dark p {
-    padding: 0 10px 10px 10px;
-    text-align: left;
-  }
-  #main aside#sidebar .dark h3 {
-    margin: 0 0 1rem;
-  }
+  /*#main article#main-col {
+     float: none;
+     width: 100%;
+     margin-bottom: 10px;
+     padding: 0;
+   }
+ 
+   #main article#main-col h1.dark{
+     padding-top: 15px;
+     border-top-left-radius: 10px;
+     border-top-right-radius: 10px;
+   }
+ 
+   #main article#main-col p{
+     padding:0 10px 10px 10px;
+     text-align: left;
+   }*/
+  /* #main aside#sidebar{
+     float: none;
+     width: 100%;
+     margin-bottom: 10px;
+   }
+ 
+   #main aside#sidebar .dark{
+     padding-bottom: 10px;
+   }
+   #main aside#sidebar .dark p{
+     padding:0 10px 10px 10px;
+     text-align: left;
+   }
+   #main aside#sidebar .dark h3{
+     margin: 0 0 1rem;
+   }*/
 }
 
 /* Main-col */

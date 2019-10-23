@@ -1217,4 +1217,10 @@ form button.button_1 {
     padding-bottom: 50px;
   }
 }
+
+@media (max-width: 500px) {
+  #main .container aside#sidebar .dark {
+    padding-bottom: 10px;
+  }
+}
 /*# sourceMappingURL=main.css.map */

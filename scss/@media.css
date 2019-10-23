@@ -17,6 +17,16 @@
   header nav li {
     padding: 0 25px;
   }
+}
+
+@media (max-width: 768px) and (max-width: 500px) {
+  header nav li {
+    padding: 0px;
+    margin: 0 7px;
+  }
+}
+
+@media (max-width: 768px) {
   header #branding {
     margin: 0;
     padding-bottom: 15px;
@@ -41,7 +51,7 @@
   }
   /* modal */
   .modal .wrapper-content {
-    width: 40%;
+    width: 45%;
   }
   /* newsletter */
   body #newsletter h1,

@@ -6,6 +6,12 @@
   overflow: hidden;
 }
 
+@media (max-width: 500px) {
+  .container {
+    width: 90%;
+  }
+}
+
 ul {
   margin: 0;
   padding: 0;
@@ -1075,7 +1081,7 @@ footer .social-media-buttons .social-media-button.codepen:hover i {
   }
   /* modal */
   .modal .wrapper-content {
-    width: 40%;
+    width: 45%;
   }
   /* newsletter */
   body #newsletter h1,

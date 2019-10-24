@@ -1185,7 +1185,7 @@ form button.button_1 {
   display: grid;
   -ms-grid-columns: 2fr 1fr;
       grid-template-columns: 2fr 1fr;
-  grid-gap: 0.75rem;
+  grid-column-gap: 0.75rem;
   /* Sidebar */
 }
 

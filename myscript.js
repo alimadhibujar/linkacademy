@@ -1,7 +1,6 @@
 /*variabli per videon
 
 let bgVideo = document.getElementsByTagName("video")[0];
-    bgVideo = document.getElementsByTagName("video")[0];
 */
 
 //variabli per buttonin Login
@@ -11,14 +10,13 @@ let loginButton = document.getElementById("loginbutton");
 //variablet per Login Form dhe Register Form
 
 let modalForm = document.getElementById("id01");
-let loginForm = document.getElementById("login-form");
+let loginForm = document.querySelector("#login-form");
 let signUp = document.getElementById("sign-up");
 let registerForm = document.getElementById("register");
 registerForm.style.display = "none";
 let backToLogin = document.getElementById("back-to-login");
-const span = document.getElementsByClassName("close")[0];
-const spanRegister = document.getElementsByClassName("close")[1];
-let wrapper = document.getElementsByClassName("wrapper")[0];
+const span = document.getElementsByClassName("close");
+let wrapper = document.querySelector(".wrapper");
 
 //variablat per main menun ne versionin mobail
 // const menuja = document.getElementsByClassName("main")[0];
@@ -78,11 +76,11 @@ backToLogin.addEventListener("click", function() {
 
 //kur te klikojm te span te mbyllet Modal
 
-span.addEventListener("click", function() {
+span[0].addEventListener("click", function() {
   modalForm.style.display = "none";
 });
 
-spanRegister.addEventListener("click", function() {
+span[1].addEventListener("click", function() {
   modalForm.style.display = "none";
 });
 

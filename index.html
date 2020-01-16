@@ -166,9 +166,12 @@
   <!--..................Fillimi i menuse..........-->
 
   <nav id="menuja">
+      <a href="javascript:void(0);"class="icon">
+          <i class="fa fa-bars"></i> menuja 
+      </a>
     <ul class="main">
       <li>
-        <a href="https://www.w3schools.com/html/" target="_blank">html</a>
+        <a href="#">html</a>
         <ul class="drop menu1">
           <li><a href="colors.html">colors</a></li>
           <li><a href="#">news</a></li>
@@ -218,6 +221,51 @@
       </li>
     </ul>
   </nav>
+  <!--Mobile menu-->
+  <div id="mobilmenu">
+    <a href="#" class="menulink">html<i class="fa fa-caret-down"></i></a>
+    <div class="dropdown">
+      <a href="colors.html">colors</a>
+      <a href="#">news</a>
+      <a href="#">contact</a>
+      <a href="#">about</a>
+    </div>
+    <a href="#" class="menulink">css<i class="fa fa-caret-down"></i></a>
+    <div class="dropdown">
+      <a href="#">home</a>
+      <a href="#">news</a>
+      <a href="#">contact</a>
+      <a href="#">about</a>
+    </div>
+    <a href="#" class="menulink">javaScript<i class="fa fa-caret-down"></i></a>
+    <div class="dropdown">
+      <a href="#">home</a>
+      <a href="#">news</a>
+      <a href="#">contact</a>
+      <a href="#">about</a>
+    </div>
+    <a href="#" class="menulink">sql<i class="fa fa-caret-down"></i></a>
+    <div class="dropdown">
+      <a href="#">home</a>
+      <a href="#">news</a>
+      <a href="#">contact</a>
+      <a href="#">about</a>
+    </div>
+    <a href="#" class="menulink">php<i class="fa fa-caret-down"></i></a>
+    <div class="dropdown">
+      <a href="#">home</a>
+      <a href="#">news</a>
+      <a href="#">contact</a>
+      <a href="#">about</a>
+    </div>
+    <a href="#" class="menulink">python<i class="fa fa-caret-down"></i></a>
+    <div class="dropdown">
+      <a href="#">home</a>
+      <a href="#">news</a>
+      <a href="#">contact</a>
+      <a href="#">about</a>
+    </div>
+  </div>
   
   <section id="showcase">
     
@@ -244,8 +292,8 @@
      
       <div class="or-email"><span>Or  via  email</span></div>
       <form>
-        <input type="text" class="user-email" id="email" placeholder="Email" autocomplete="off"> 
-        <input type="password" class="user-pasword" id="password" placeholder="Password" autocomplete="off">
+        <i class ="fa fa-envelope"></i><input type="text" class="user-email" id="email" placeholder= "Email" autocomplete="off"> 
+        <i class ="fa fa-lock"></i><input type="password" class="user-pasword" id="password" placeholder="Password" autocomplete="off">
       </form>
       <div class="logout">
         <input type="submit" value="Login">

@@ -39,7 +39,7 @@ header {
   color: #ffffff;
   padding-top: 30px;
   min-height: 100px;
-  border-bottom: #6405E2 2px solid;
+  border-bottom: #6405e2 2px solid;
 }
 
 header nav {
@@ -147,14 +147,23 @@ header #branding #weblogo {
   }
 }
 
+header #branding #weblogo:hover {
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
+  -webkit-transition: -webkit-transform 1.8s;
+  transition: -webkit-transform 1.8s;
+  transition: transform 1.8s;
+  transition: transform 1.8s, -webkit-transform 1.8s;
+}
+
 header #branding .highlight {
-  color: #6405E2;
+  color: #6405e2;
   font-weight: bold;
   padding: 0 5px 0 5px;
 }
 
 body {
-  font: 15px/1.5 Arial, Helvetica,sans-serif;
+  font: 15px/1.5 Arial, Helvetica, sans-serif;
   padding: 0;
   margin: 0;
   background-color: black;
@@ -165,7 +174,7 @@ body canvas {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #4B2C99;
+  background-color: #4b2c99;
   z-index: -1;
 }
 
@@ -198,7 +207,7 @@ body #showcase .overlay {
           transform: translate(-50%, -50%);
   position: absolute;
   width: 100vw;
-  height: 320px;
+  height: 310px;
   background-color: #001524;
   opacity: 0.5;
 }
@@ -268,7 +277,7 @@ body #newsletter form .button_1 {
 }
 
 body #boxes {
-  background-color: #000B18;
+  background-color: #000b18;
 }
 
 body #boxes .container {
@@ -315,11 +324,70 @@ body #boxes .container .box img {
   margin-top: 1rem;
 }
 
+body #boxes .container .box img:hover {
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
+  -webkit-transition: -webkit-transform 1.8s;
+  transition: -webkit-transform 1.8s;
+  transition: transform 1.8s;
+  transition: transform 1.8s, -webkit-transform 1.8s;
+}
+
 #menuja {
   height: 40px;
   margin: 0px auto;
   background-color: rgba(23, 23, 50, 0.7);
   text-align: center;
+  /*------------- menu1 animation -------------------*/
+  /*------------- menu2 animation -------------------*/
+  /*------------- menu3 animation -------------------*/
+  /*------------- menu4 animation -------------------*/
+  /*------------- menu5 animation -------------------*/
+  /*------------- menu6 animation -------------------*/
+}
+
+#menuja a:hover {
+  background-color: #4e2e9d;
+}
+
+#menuja .icon {
+  display: none;
+}
+
+#menuja .icon .fa {
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+@media (max-width: 500px) {
+  #menuja .icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-preferred-size: 60%;
+        flex-basis: 60%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 120px;
+    z-index: 2;
+    padding: 7px 10px;
+    font-size: 16px;
+    margin: 0 auto 3px;
+    margin-bottom: 3px;
+    background-color: rgba(23, 23, 50, 0.7);
+    border-radius: 5px;
+    text-decoration: none;
+    color: #ffffff;
+    opacity: 0.95;
+    text-transform: capitalize;
+    font-family: monospace;
+  }
+  #menuja .icon a {
+    width: 60%;
+  }
 }
 
 #menuja .main {
@@ -331,12 +399,23 @@ body #boxes .container .box img {
           justify-content: center;
   position: relative;
   z-index: 2;
-  /*------------- menu1 animation -------------------*/
-  /*------------- menu2 animation -------------------*/
-  /*------------- menu3 animation -------------------*/
-  /*------------- menu4 animation -------------------*/
-  /*------------- menu5 animation -------------------*/
-  /*------------- menu6 animation -------------------*/
+}
+
+@media (max-width: 500px) {
+  #menuja .main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    display: none;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 #menuja .main li {
@@ -363,12 +442,15 @@ body #boxes .container .box img {
 
 @media (max-width: 500px) {
   #menuja .main li a {
-    padding: 7px 10px;
+    width: 60%;
+    margin: 0 auto 3px;
+    background-color: black;
+    text-align: center;
   }
 }
 
 #menuja .main li a:hover {
-  background-color: #4E2E9D;
+  background-color: #4e2e9d;
 }
 
 #menuja .main li .drop li {
@@ -384,31 +466,37 @@ body #boxes .container .box img {
 }
 
 #menuja .main li .drop li a:hover {
-  background-color: #4E2E9D;
+  background-color: blue;
 }
 
-#menuja .main li:hover .menu1 li:first-of-type {
+@media (max-width: 500px) {
+  #menuja .main li .drop li {
+    position: relative;
+  }
+}
+
+#menuja li:hover .menu1 li:first-of-type {
   -webkit-animation: menu1 0.3s ease-in-out forwards;
           animation: menu1 0.3s ease-in-out forwards;
   -webkit-animation-delay: 0.3s;
           animation-delay: 0.3s;
 }
 
-#menuja .main li:hover .menu1 li:nth-of-type(2) {
+#menuja li:hover .menu1 li:nth-of-type(2) {
   -webkit-animation: menu1 0.3s ease-in-out forwards;
           animation: menu1 0.3s ease-in-out forwards;
   -webkit-animation-delay: 0.6s;
           animation-delay: 0.6s;
 }
 
-#menuja .main li:hover .menu1 li:nth-of-type(3) {
+#menuja li:hover .menu1 li:nth-of-type(3) {
   -webkit-animation: menu1 0.3s ease-in-out forwards;
           animation: menu1 0.3s ease-in-out forwards;
   -webkit-animation-delay: 0.9s;
           animation-delay: 0.9s;
 }
 
-#menuja .main li:hover .menu1 li:last-of-type {
+#menuja li:hover .menu1 li:last-of-type {
   -webkit-animation: menu1 0.3s ease-in-out forwards;
           animation: menu1 0.3s ease-in-out forwards;
   -webkit-animation-delay: 1.2s;
@@ -441,28 +529,28 @@ body #boxes .container .box img {
   }
 }
 
-#menuja .main li:hover .menu2 li:first-of-type {
+#menuja li:hover .menu2 li:first-of-type {
   -webkit-animation: menu2 0.3s ease-in-out forwards;
           animation: menu2 0.3s ease-in-out forwards;
   -webkit-animation-delay: 0.3s;
           animation-delay: 0.3s;
 }
 
-#menuja .main li:hover .menu2 li:nth-of-type(2) {
+#menuja li:hover .menu2 li:nth-of-type(2) {
   -webkit-animation: menu2 0.3s ease-in-out forwards;
           animation: menu2 0.3s ease-in-out forwards;
   -webkit-animation-delay: 0.6s;
           animation-delay: 0.6s;
 }
 
-#menuja .main li:hover .menu2 li:nth-of-type(3) {
+#menuja li:hover .menu2 li:nth-of-type(3) {
   -webkit-animation: menu2 0.3s ease-in-out forwards;
           animation: menu2 0.3s ease-in-out forwards;
   -webkit-animation-delay: 0.9s;
           animation-delay: 0.9s;
 }
 
-#menuja .main li:hover .menu2 li:last-of-type {
+#menuja li:hover .menu2 li:last-of-type {
   -webkit-animation: menu2 0.3s ease-in-out forwards;
           animation: menu2 0.3s ease-in-out forwards;
   -webkit-animation-delay: 1.2s;
@@ -505,28 +593,28 @@ body #boxes .container .box img {
   }
 }
 
-#menuja .main li:hover .menu3 li:first-of-type {
+#menuja li:hover .menu3 li:first-of-type {
   -webkit-animation: menu3 0.3s ease-in-out forwards;
           animation: menu3 0.3s ease-in-out forwards;
   -webkit-animation-delay: 0.3s;
           animation-delay: 0.3s;
 }
 
-#menuja .main li:hover .menu3 li:nth-of-type(2) {
+#menuja li:hover .menu3 li:nth-of-type(2) {
   -webkit-animation: menu3 0.3s ease-in-out forwards;
           animation: menu3 0.3s ease-in-out forwards;
   -webkit-animation-delay: 0.6s;
           animation-delay: 0.6s;
 }
 
-#menuja .main li:hover .menu3 li:nth-of-type(3) {
+#menuja li:hover .menu3 li:nth-of-type(3) {
   -webkit-animation: menu3 0.3s ease-in-out forwards;
           animation: menu3 0.3s ease-in-out forwards;
   -webkit-animation-delay: 0.9s;
           animation-delay: 0.9s;
 }
 
-#menuja .main li:hover .menu3 li:last-of-type {
+#menuja li:hover .menu3 li:last-of-type {
   -webkit-animation: menu3 0.3s ease-in-out forwards;
           animation: menu3 0.3s ease-in-out forwards;
   -webkit-animation-delay: 1.2s;
@@ -559,28 +647,28 @@ body #boxes .container .box img {
   }
 }
 
-#menuja .main li:hover .menu4 li:first-of-type {
+#menuja li:hover .menu4 li:first-of-type {
   -webkit-animation: menu4 0.3s ease-in-out forwards;
           animation: menu4 0.3s ease-in-out forwards;
   -webkit-animation-delay: 0.3s;
           animation-delay: 0.3s;
 }
 
-#menuja .main li:hover .menu4 li:nth-of-type(2) {
+#menuja li:hover .menu4 li:nth-of-type(2) {
   -webkit-animation: menu4 0.3s ease-in-out forwards;
           animation: menu4 0.3s ease-in-out forwards;
   -webkit-animation-delay: 0.6s;
           animation-delay: 0.6s;
 }
 
-#menuja .main li:hover .menu4 li:nth-of-type(3) {
+#menuja li:hover .menu4 li:nth-of-type(3) {
   -webkit-animation: menu4 0.3s ease-in-out forwards;
           animation: menu4 0.3s ease-in-out forwards;
   -webkit-animation-delay: 0.9s;
           animation-delay: 0.9s;
 }
 
-#menuja .main li:hover .menu4 li:last-of-type {
+#menuja li:hover .menu4 li:last-of-type {
   -webkit-animation: menu4 0.3s ease-in-out forwards;
           animation: menu4 0.3s ease-in-out forwards;
   -webkit-animation-delay: 1.2s;
@@ -613,28 +701,28 @@ body #boxes .container .box img {
   }
 }
 
-#menuja .main li:hover .menu5 li:first-of-type {
+#menuja li:hover .menu5 li:first-of-type {
   -webkit-animation: menu5 0.3s ease-in-out forwards;
           animation: menu5 0.3s ease-in-out forwards;
   -webkit-animation-delay: 0.3s;
           animation-delay: 0.3s;
 }
 
-#menuja .main li:hover .menu5 li:nth-of-type(2) {
+#menuja li:hover .menu5 li:nth-of-type(2) {
   -webkit-animation: menu5 0.3s ease-in-out forwards;
           animation: menu5 0.3s ease-in-out forwards;
   -webkit-animation-delay: 0.6s;
           animation-delay: 0.6s;
 }
 
-#menuja .main li:hover .menu5 li:nth-of-type(3) {
+#menuja li:hover .menu5 li:nth-of-type(3) {
   -webkit-animation: menu5 0.3s ease-in-out forwards;
           animation: menu5 0.3s ease-in-out forwards;
   -webkit-animation-delay: 0.9s;
           animation-delay: 0.9s;
 }
 
-#menuja .main li:hover .menu5 li:last-of-type {
+#menuja li:hover .menu5 li:last-of-type {
   -webkit-animation: menu5 0.3s ease-in-out forwards;
           animation: menu5 0.3s ease-in-out forwards;
   -webkit-animation-delay: 1.2s;
@@ -667,28 +755,28 @@ body #boxes .container .box img {
   }
 }
 
-#menuja .main li:hover .menu6 li:first-of-type {
+#menuja li:hover .menu6 li:first-of-type {
   -webkit-animation: menu6 0.3s ease-in-out forwards;
           animation: menu6 0.3s ease-in-out forwards;
   -webkit-animation-delay: 0.2s;
           animation-delay: 0.2s;
 }
 
-#menuja .main li:hover .menu6 li:nth-of-type(2) {
+#menuja li:hover .menu6 li:nth-of-type(2) {
   -webkit-animation: menu6 0.3s ease-in-out forwards;
           animation: menu6 0.3s ease-in-out forwards;
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
 
-#menuja .main li:hover .menu6 li:nth-of-type(3) {
+#menuja li:hover .menu6 li:nth-of-type(3) {
   -webkit-animation: menu6 0.3s ease-in-out forwards;
           animation: menu6 0.3s ease-in-out forwards;
   -webkit-animation-delay: 0.6s;
           animation-delay: 0.6s;
 }
 
-#menuja .main li:hover .menu6 li:last-of-type {
+#menuja li:hover .menu6 li:last-of-type {
   -webkit-animation: menu6 0.3s ease-in-out forwards;
           animation: menu6 0.3s ease-in-out forwards;
   -webkit-animation-delay: 0.8s;
@@ -772,7 +860,7 @@ body #boxes .container .box img {
   padding-left: 10px;
   text-align: left;
   background-color: #1a1c1d;
-  color: #272A35;
+  color: #272a35;
   font-size: 1rem;
 }
 
@@ -815,12 +903,21 @@ body #boxes .container .box img {
 }
 
 .modal .wrapper-content .facebook {
-  background: #45619D;
+  background: #45619d;
 }
 
 .modal .wrapper-content button i {
   position: absolute;
   font-size: 20px;
+}
+
+.modal .wrapper-content button:hover {
+  -webkit-transform: rotateX(360deg);
+          transform: rotateX(360deg);
+  -webkit-transition: -webkit-transform 1.8s;
+  transition: -webkit-transform 1.8s;
+  transition: transform 1.8s;
+  transition: transform 1.8s, -webkit-transform 1.8s;
 }
 
 .modal .wrapper .hed-fb {
@@ -831,8 +928,8 @@ body #boxes .container .box img {
 .modal .wrapper h3 {
   padding: 10px 0 0;
   text-align: center;
-  font-size: .9rem;
-  letter-spacing: .1rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
 }
 
 .modal .or-email {
@@ -842,8 +939,8 @@ body #boxes .container .box img {
 }
 
 .modal .or-email span {
-  font-size: .9rem;
-  letter-spacing: .1rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
   font-weight: 400;
 }
 
@@ -853,15 +950,30 @@ body #boxes .container .box img {
   width: 100%;
 }
 
-.modal input[type="text"], .modal input[type="password"] {
+.modal form i {
+  position: relative;
+  top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1em;
+  color: #757575;
+  width: 5%;
+}
+
+.modal input[type="text"],
+.modal input[type="password"] {
+  margin-left: 15px;
   font-size: 1em;
   font-weight: 600;
-  letter-spacing: .1rem;
-  padding: 0 5px;
+  letter-spacing: 0.1rem;
+  padding: 0 3px;
   outline: none;
 }
 
-.modal .user-name, .modal .user-pasword, .modal .user-email {
+.modal .user-name,
+.modal .user-pasword,
+.modal .user-email {
   border-bottom: 1px solid #4d4d4d;
 }
 
@@ -877,7 +989,7 @@ body #boxes .container .box img {
 
 .modal input {
   border: 0;
-  width: 100%;
+  width: 90%;
   height: 65px;
   background-color: transparent;
 }
@@ -894,8 +1006,8 @@ body #boxes .container .box img {
   padding: 2px;
   margin: 60px 0 10px;
   border-radius: 50px;
-  border: 2px solid #1D201A;
-  color: #DC6180;
+  border: 2px solid #1d201a;
+  color: #dc6180;
 }
 
 .modal input[type="submit"] {
@@ -907,7 +1019,7 @@ body #boxes .container .box img {
   color: #fff;
   font-size: 1em;
   font-weight: 100;
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
 }
 
 .modal input[type="submit"]:hover {
@@ -915,7 +1027,7 @@ body #boxes .container .box img {
 }
 
 .modal .forgot-pass {
-  font-size: .9rem;
+  font-size: 0.9rem;
   padding: 0 30px 0 56px;
   color: #606479;
 }
@@ -1095,8 +1207,7 @@ footer .social-media-buttons .social-media-button.codepen:hover i {
     padding-top: 0px;
     text-align: center;
   }
-  body #newsletter .container
-form button.button_1 {
+  body #newsletter .container form button.button_1 {
     display: block;
     width: 100%;
     margin: 0 0 5px 0;
@@ -1105,7 +1216,9 @@ form button.button_1 {
   body #newsletter form {
     margin: 0;
   }
-  body #newsletter form input[type="email"], .quote input, .quote textarea {
+  body #newsletter form input[type="email"],
+  .quote input,
+  .quote textarea {
     width: 100%;
     margin-bottom: 5px;
     padding: 4px 0;
@@ -1113,14 +1226,20 @@ form button.button_1 {
 }
 
 @media (max-width: 768px) and (min-aspect-ratio: 16 / 9) {
-  #showcase, video, .overlay, .content {
+  #showcase,
+  video,
+  .overlay,
+  .content {
     width: 100%;
     height: auto;
   }
 }
 
 @media (max-width: 768px) and (max-aspect-ratio: 16 / 9) {
-  #showcase, video, .overlay, .content {
+  #showcase,
+  video,
+  .overlay,
+  .content {
     width: auto;
     height: 100%;
   }
@@ -1221,6 +1340,130 @@ form button.button_1 {
 @media (max-width: 500px) {
   #main .container aside#sidebar .dark {
     padding-bottom: 10px;
+  }
+}
+
+#mobilmenu {
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: rgba(23, 23, 50, 0.9);
+  position: relative;
+  text-align: center;
+  display: none;
+  z-index: 2;
+}
+
+#mobilmenu a {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 3px solid black;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #ffffff;
+  opacity: 0.95;
+  text-transform: capitalize;
+  font-family: monospace;
+  display: block;
+  padding: 10px 20px;
+  font-size: 16px;
+  -webkit-transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
+  font-family: "Raleway", sans-serif;
+  text-align: left;
+}
+
+@media (min-width: 500px) {
+  #mobilmenu a {
+    display: none;
+  }
+}
+
+#mobilmenu a i {
+  font-size: 24px;
+  float: right;
+}
+
+#mobilmenu a:hover {
+  background-color: blue;
+}
+
+#mobilmenu .dropdown {
+  display: none;
+  background-color: black;
+}
+
+#mobilmenu .dropdown a {
+  border: 2px solid rgba(23, 23, 50, 0.9);
+  border-radius: 5px;
+  text-align: center;
+}
+
+#mobilmenu #mobilmenu .menulink :first-of-type {
+  -webkit-animation: menulink 0.3s ease-in-out forwards;
+          animation: menulink 0.3s ease-in-out forwards;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+#mobilmenu .menulink :nth-of-type(2) {
+  -webkit-animation: menulink 0.3s ease-in-out forwards;
+          animation: menulink 0.3s ease-in-out forwards;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+#mobilmenu .menulink :nth-of-type(3) {
+  -webkit-animation: menulink 0.3s ease-in-out forwards;
+          animation: menulink 0.3s ease-in-out forwards;
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+
+#mobilmenu .menulink :nth-of-type(4) {
+  -webkit-animation: menulink 0.3s ease-in-out forwards;
+          animation: menulink 0.3s ease-in-out forwards;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+}
+
+#mobilmenu .menulink :nth-of-type(5) {
+  -webkit-animation: menulink 0.3s ease-in-out forwards;
+          animation: menulink 0.3s ease-in-out forwards;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+#mobilmenu .menulink :last-of-type {
+  -webkit-animation: menulink 0.3s ease-in-out forwards;
+          animation: menulink 0.3s ease-in-out forwards;
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
+}
+
+@-webkit-keyframes menulink {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(50px) rotate(-90deg);
+            transform: translateX(50px) rotate(-90deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0) rotate(0);
+            transform: translateX(0) rotate(0);
+  }
+}
+
+@keyframes menulink {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(50px) rotate(-90deg);
+            transform: translateX(50px) rotate(-90deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0) rotate(0);
+            transform: translateX(0) rotate(0);
   }
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,81 @@
+#mobilmenu {
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: rgba(23, 23, 50, 0.9);
+  position: relative;
+  text-align: center;
+  display: none;
+  z-index: 2;
+  a {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 3px solid black;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #ffffff;
+    opacity: 0.95;
+    text-transform: capitalize;
+    font-family: monospace;
+    display: block;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: background-color 0.5s ease-in-out;
+    font-family: "Raleway", sans-serif;
+    text-align: left;
+    @media (min-width: 500px) {
+      display: none;
+    }
+    i {
+      font-size: 24px;
+      float: right;
+    }
+  }
+  a:hover {
+    background-color: blue;
+  }
+  .dropdown {
+    display: none;
+    background-color: black;
+    a {
+      border: 2px solid rgba(23, 23, 50, 0.9);
+      border-radius: 5px;
+      text-align: center;
+    }
+  }
+
+  #mobilmenu .menulink :first-of-type {
+    animation: menulink 0.3s ease-in-out forwards;
+    animation-delay: 0.3s;
+  }
+  .menulink :nth-of-type(2) {
+    animation: menulink 0.3s ease-in-out forwards;
+    animation-delay: 0.6s;
+  }
+  .menulink :nth-of-type(3) {
+    animation: menulink 0.3s ease-in-out forwards;
+    animation-delay: 0.9s;
+  }
+  .menulink :nth-of-type(4) {
+    animation: menulink 0.3s ease-in-out forwards;
+    animation-delay: 1.2s;
+  }
+  .menulink :nth-of-type(5) {
+    animation: menulink 0.3s ease-in-out forwards;
+    animation-delay: 1.5s;
+  }
+  .menulink :last-of-type {
+    animation: menulink 0.3s ease-in-out forwards;
+    animation-delay: 1.8s;
+  }
+  @keyframes menulink {
+    0% {
+      opacity: 0;
+      transform: translateX(50px) rotate(-90deg);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0) rotate(0);
+    }
+  }
+}

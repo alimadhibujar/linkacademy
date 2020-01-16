@@ -65,8 +65,7 @@
     padding-top: 0px;
     text-align: center;
   }
-  body #newsletter .container
-form button.button_1 {
+  body #newsletter .container form button.button_1 {
     display: block;
     width: 100%;
     margin: 0 0 5px 0;
@@ -75,7 +74,9 @@ form button.button_1 {
   body #newsletter form {
     margin: 0;
   }
-  body #newsletter form input[type="email"], .quote input, .quote textarea {
+  body #newsletter form input[type="email"],
+  .quote input,
+  .quote textarea {
     width: 100%;
     margin-bottom: 5px;
     padding: 4px 0;
@@ -83,14 +84,20 @@ form button.button_1 {
 }
 
 @media (max-width: 768px) and (min-aspect-ratio: 16 / 9) {
-  #showcase, video, .overlay, .content {
+  #showcase,
+  video,
+  .overlay,
+  .content {
     width: 100%;
     height: auto;
   }
 }
 
 @media (max-width: 768px) and (max-aspect-ratio: 16 / 9) {
-  #showcase, video, .overlay, .content {
+  #showcase,
+  video,
+  .overlay,
+  .content {
     width: auto;
     height: 100%;
   }

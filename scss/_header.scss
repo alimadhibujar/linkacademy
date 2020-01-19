@@ -87,10 +87,10 @@ header {
       @media (max-width: 500px) {
         max-width: 275px;
       }
+      transition: transform 1.8s ease-in-out;
     }
     #weblogo:hover {
       transform: rotateY(360deg);
-      transition: transform 1.8s;
     }
 
     .highlight {

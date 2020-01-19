@@ -133,6 +133,10 @@ header #branding h1 {
 header #branding #weblogo {
   max-width: 100%;
   height: auto;
+  -webkit-transition: -webkit-transform 1.8s ease-in-out;
+  transition: -webkit-transform 1.8s ease-in-out;
+  transition: transform 1.8s ease-in-out;
+  transition: transform 1.8s ease-in-out, -webkit-transform 1.8s ease-in-out;
 }
 
 @media only screen and (max-width: 1100px) {
@@ -150,10 +154,6 @@ header #branding #weblogo {
 header #branding #weblogo:hover {
   -webkit-transform: rotateY(360deg);
           transform: rotateY(360deg);
-  -webkit-transition: -webkit-transform 1.8s;
-  transition: -webkit-transform 1.8s;
-  transition: transform 1.8s;
-  transition: transform 1.8s, -webkit-transform 1.8s;
 }
 
 header #branding .highlight {
@@ -322,15 +322,15 @@ body #boxes .container .box p {
 body #boxes .container .box img {
   width: 90px;
   margin-top: 1rem;
+  -webkit-transition: -webkit-transform 1.8s ease-in-out;
+  transition: -webkit-transform 1.8s ease-in-out;
+  transition: transform 1.8s ease-in-out;
+  transition: transform 1.8s ease-in-out, -webkit-transform 1.8s ease-in-out;
 }
 
 body #boxes .container .box img:hover {
   -webkit-transform: rotateY(360deg);
           transform: rotateY(360deg);
-  -webkit-transition: -webkit-transform 1.8s;
-  transition: -webkit-transform 1.8s;
-  transition: transform 1.8s;
-  transition: transform 1.8s, -webkit-transform 1.8s;
 }
 
 #menuja {
@@ -355,8 +355,7 @@ body #boxes .container .box img:hover {
 }
 
 #menuja .icon .fa {
-  margin-top: 5px;
-  margin-right: 5px;
+  margin: 4px 5px 0 0;
 }
 
 @media (max-width: 500px) {
@@ -371,7 +370,6 @@ body #boxes .container .box img:hover {
         flex-basis: 60%;
     position: -webkit-sticky;
     position: sticky;
-    top: 120px;
     z-index: 2;
     padding: 7px 10px;
     font-size: 16px;
@@ -403,18 +401,7 @@ body #boxes .container .box img:hover {
 
 @media (max-width: 500px) {
   #menuja .main {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    position: relative;
     display: none;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
 }
 
@@ -435,18 +422,9 @@ body #boxes .container .box img:hover {
   display: block;
   padding: 7px 20px;
   font-size: 16px;
-  -webkit-transition: background-color 0.5s ease-in-out;
-  transition: background-color 0.5s ease-in-out;
+  -webkit-transition: background-color 1s ease-in-out;
+  transition: background-color 1s ease-in-out;
   font-family: "Raleway", sans-serif;
-}
-
-@media (max-width: 500px) {
-  #menuja .main li a {
-    width: 60%;
-    margin: 0 auto 3px;
-    background-color: black;
-    text-align: center;
-  }
 }
 
 #menuja .main li a:hover {
@@ -463,16 +441,12 @@ body #boxes .container .box img:hover {
   background-color: black;
   padding: 10px 0;
   border-radius: 5px;
+  -webkit-transition: background-color 1s ease-in-out;
+  transition: background-color 1s ease-in-out;
 }
 
 #menuja .main li .drop li a:hover {
   background-color: blue;
-}
-
-@media (max-width: 500px) {
-  #menuja .main li .drop li {
-    position: relative;
-  }
 }
 
 #menuja li:hover .menu1 li:first-of-type {
@@ -900,6 +874,10 @@ body #boxes .container .box img:hover {
   border-radius: 10px;
   color: #fff;
   border: 1px solid rgba(46, 46, 47, 0.72);
+  -webkit-transition: -webkit-transform 1.8s ease-in-out;
+  transition: -webkit-transform 1.8s ease-in-out;
+  transition: transform 1.8s ease-in-out;
+  transition: transform 1.8s ease-in-out, -webkit-transform 1.8s ease-in-out;
 }
 
 .modal .wrapper-content .facebook {
@@ -914,10 +892,6 @@ body #boxes .container .box img:hover {
 .modal .wrapper-content button:hover {
   -webkit-transform: rotateX(360deg);
           transform: rotateX(360deg);
-  -webkit-transition: -webkit-transform 1.8s;
-  transition: -webkit-transform 1.8s;
-  transition: transform 1.8s;
-  transition: transform 1.8s, -webkit-transform 1.8s;
 }
 
 .modal .wrapper .hed-fb {
@@ -952,7 +926,7 @@ body #boxes .container .box img:hover {
 
 .modal form i {
   position: relative;
-  top: 40px;
+  top: 32px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -990,7 +964,7 @@ body #boxes .container .box img:hover {
 .modal input {
   border: 0;
   width: 90%;
-  height: 65px;
+  height: 50px;
   background-color: transparent;
 }
 
@@ -1367,10 +1341,12 @@ footer .social-media-buttons .social-media-button.codepen:hover i {
   display: block;
   padding: 10px 20px;
   font-size: 16px;
-  -webkit-transition: background-color 0.5s ease-in-out;
-  transition: background-color 0.5s ease-in-out;
+  -webkit-transition: background 2s ease-in-out;
+  transition: background 2s ease-in-out;
   font-family: "Raleway", sans-serif;
   text-align: left;
+  -webkit-animation: mobilemenu 0.3s ease-in-out forwards;
+          animation: mobilemenu 0.3s ease-in-out forwards;
 }
 
 @media (min-width: 500px) {
@@ -1391,6 +1367,8 @@ footer .social-media-buttons .social-media-button.codepen:hover i {
 #mobilmenu .dropdown {
   display: none;
   background-color: black;
+  -webkit-animation: dropdown 0.3s ease-in-out forwards;
+          animation: dropdown 0.3s ease-in-out forwards;
 }
 
 #mobilmenu .dropdown a {
@@ -1399,49 +1377,33 @@ footer .social-media-buttons .social-media-button.codepen:hover i {
   text-align: center;
 }
 
-#mobilmenu #mobilmenu .menulink :first-of-type {
-  -webkit-animation: menulink 0.3s ease-in-out forwards;
-          animation: menulink 0.3s ease-in-out forwards;
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
+@-webkit-keyframes mobilemenu {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
-#mobilmenu .menulink :nth-of-type(2) {
-  -webkit-animation: menulink 0.3s ease-in-out forwards;
-          animation: menulink 0.3s ease-in-out forwards;
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
+@keyframes mobilemenu {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(2);
+            transform: scale(2);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
-#mobilmenu .menulink :nth-of-type(3) {
-  -webkit-animation: menulink 0.3s ease-in-out forwards;
-          animation: menulink 0.3s ease-in-out forwards;
-  -webkit-animation-delay: 0.9s;
-          animation-delay: 0.9s;
-}
-
-#mobilmenu .menulink :nth-of-type(4) {
-  -webkit-animation: menulink 0.3s ease-in-out forwards;
-          animation: menulink 0.3s ease-in-out forwards;
-  -webkit-animation-delay: 1.2s;
-          animation-delay: 1.2s;
-}
-
-#mobilmenu .menulink :nth-of-type(5) {
-  -webkit-animation: menulink 0.3s ease-in-out forwards;
-          animation: menulink 0.3s ease-in-out forwards;
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
-}
-
-#mobilmenu .menulink :last-of-type {
-  -webkit-animation: menulink 0.3s ease-in-out forwards;
-          animation: menulink 0.3s ease-in-out forwards;
-  -webkit-animation-delay: 1.8s;
-          animation-delay: 1.8s;
-}
-
-@-webkit-keyframes menulink {
+@-webkit-keyframes dropdown {
   0% {
     opacity: 0;
     -webkit-transform: translateX(50px) rotate(-90deg);
@@ -1454,7 +1416,7 @@ footer .social-media-buttons .social-media-button.codepen:hover i {
   }
 }
 
-@keyframes menulink {
+@keyframes dropdown {
   0% {
     opacity: 0;
     -webkit-transform: translateX(50px) rotate(-90deg);

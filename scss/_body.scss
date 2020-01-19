@@ -130,10 +130,10 @@ body {
       .box img {
         width: 90px;
         margin-top: 1rem;
+        transition: transform 1.8s ease-in-out;
       }
       .box img:hover {
         transform: rotateY(360deg);
-        transition: transform 1.8s;
       }
     }
   }

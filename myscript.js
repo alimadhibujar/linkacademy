@@ -22,26 +22,14 @@ let wrapper = document.querySelector(".wrapper");
 // const menuja = document.getElementsByClassName("main")[0];
 const butoniMenus = document.getElementsByClassName("icon")[0];
 var mobilMenu = document.getElementById("mobilmenu");
-var mobileLink = document.getElementsByClassName("menulink");
+var mobileLink = document.querySelectorAll("a.menulink");
 //Variablat per Drop menun ne versioni mobile
 // const htmlButton = menuja.children[0].children[0];
-// const cssButton = menuja.children[01].children[0];
-// const jsButton = menuja.children[02].children[0];
-// const sqlButton = menuja.children[03].children[0];
-// const phpButton = menuja.children[04].children[0];
-// const pythonButton = menuja.children[05].children[0];
-// const dropMenu1 = document.getElementsByClassName("drop menu1")[0];
-// dropMenu1.style.display = "block";
-// const dropMenu2 = document.getElementsByClassName("drop menu2")[0];
-// dropMenu2.style.display = "block";
-// const dropMenu3 = document.getElementsByClassName("drop menu3")[0];
-// dropMenu3.style.display = "block";
-// const dropMenu4 = document.getElementsByClassName("drop menu4")[0];
-// dropMenu4.style.display = "block";
-// const dropMenu5 = document.getElementsByClassName("drop menu5")[0];
-// dropMenu5.style.display = "block";
-// const dropMenu6 = document.getElementsByClassName("drop menu6")[0];
-// dropMenu6.style.display = "block";
+// const cssButton = menuja.children[1].children[0];
+// const jsButton = menuja.children[2].children[0];
+// const sqlButton = menuja.children[3].children[0];
+// const phpButton = menuja.children[4].children[0];
+// const pythonButton = menuja.children[5].children[0];
 // const drMenu = dropMenu1.children;
 // console.log(htmlButton);
 /*kur te ngarkohet windowsi videjoa te bej autoply ne vazhdimsi
@@ -95,9 +83,13 @@ window.addEventListener("click", function() {
     event.target == modalForm
   ) {
     modalForm.style.display = "none";
-  }
-  //  else if (event.target !== mobileLink && mobilMenu.style.display.match("block")) {
+  } // else if (
+  //   event.target != butoniMenus ||
+  //   (event.target == mobileLink && mobilMenu.style.display === "none")
+  // ) {
   //   mobilMenu.style.display = "none";
+  // } //  else {
+  //   mobilMenu.style.display = "block";
   // }
 });
 

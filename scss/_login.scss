@@ -87,6 +87,7 @@
   border-radius: 10px;
   color: #fff;
   border: 1px solid rgba(46, 46, 47, 0.72);
+  transition: transform 1.8s ease-in-out;
 }
 
 .modal .wrapper-content .facebook {
@@ -99,7 +100,6 @@
 }
 .modal .wrapper-content button:hover {
   transform: rotateX(360deg);
-  transition: transform 1.8s;
 }
 
 .modal .wrapper .hed-fb {
@@ -133,7 +133,7 @@
 }
 .modal form i {
   position: relative;
-  top: 40px;
+  top: 32px;
   display: flex;
   font-size: 1em;
   color: #757575;
@@ -168,7 +168,7 @@
 .modal input {
   border: 0;
   width: 90%;
-  height: 65px;
+  height: 50px;
   background-color: transparent;
 }
 

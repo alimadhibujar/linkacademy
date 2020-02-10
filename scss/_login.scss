@@ -18,41 +18,50 @@
 .modal .wrapper {
   width: 100%;
   #register {
-    .form {
-      .btn {
-        width: 50%;
-        border: 0;
-        border-radius: 5px;
-        height: 30px;
-        padding-left: 5px;
-        text-align: center;
-        background-color: #1a1c1d;
-        color: #fff;
-        font-size: 1rem;
+    .wrapper-content {
+      color: #757575;
+      .large {
+        text-shadow: 1px 1px 1px #cccccc;
       }
-      .btn:hover {
-        color: blue;
-        background-color: #fff;
-      }
-      .form-group {
-        margin-bottom: 20px;
-        input {
-          width: 90%;
+      .form {
+        .btn {
+          width: 50%;
           border: 0;
           border-radius: 5px;
           height: 30px;
-          padding-left: 10px;
-          text-align: left;
+          padding-left: 5px;
+          text-align: center;
           background-color: #1a1c1d;
-          color: #272a35;
+          color: #757575;
           font-size: 1rem;
         }
-        input:hover {
+        .btn:hover {
+          color: blue;
           background-color: #fff;
         }
-        .form-text {
-          padding-left: 10px;
-          width: 90%;
+        .form-group {
+          margin-bottom: 20px;
+          input {
+            width: 90%;
+            border: 0;
+            border-radius: 5px;
+            height: 30px;
+            margin: 0;
+            padding: 0 3px 0 10px;
+            text-align: left;
+            background-color: #1a1c1d;
+            color: #272a35;
+            font-size: 1rem;
+            font-weight: 500;
+          }
+          input:hover {
+            background-color: #fff;
+          }
+          .form-text {
+            padding-left: 10px;
+            width: 90%;
+            color: #757575;
+          }
         }
       }
     }
@@ -62,31 +71,23 @@
 .modal .wrapper-content {
   position: relative;
   width: 25%;
-
   margin: 170px auto;
   background: #35394a;
   border-radius: 10px;
-  /* Old browsers */
-  /* FF3.6+ */
-  /* Chrome,Safari4+ */
-  /* Chrome10+,Safari5.1+ */
-  /* Opera 11.10+ */
-  /* IE10+ */
   background: linear-gradient(45deg, #35394a 0%, #1f222e 100%);
-  /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#35394a', endColorstr='#1f222e',GradientType=1 );
-  /* IE6-9 fallback on horizontal gradient */
   padding: 20px 30px;
 }
 
 .modal .wrapper-content button {
   width: 45%;
   padding: 11px 0 24px;
+  box-shadow: 1px 1px 2px #040e16, inset -1px -1px 2px #040e16;
   outline: initial;
   background-color: black;
   border-radius: 10px;
   color: #fff;
-  border: 1px solid rgba(46, 46, 47, 0.72);
+  border: 1px solid #282a2c;
   transition: transform 1.8s ease-in-out;
 }
 
@@ -107,25 +108,14 @@
   position: relative;
 }
 
-.modal .wrapper h3 {
-  padding: 10px 0 0;
-  text-align: center;
-  font-size: 0.9rem;
-  letter-spacing: 0.1rem;
-}
-
 .modal .or-email {
-  text-align: center;
-  color: #fff;
-  line-height: 5rem;
-}
-
-.modal .or-email span {
-  font-size: 0.9rem;
+  font-size: 1rem;
   letter-spacing: 0.1rem;
-  font-weight: 400;
+  text-align: center;
+  color: #757575;
+  line-height: 5rem;
+  text-shadow: 1px 1px 1px #4d4d4d;
 }
-
 .modal form {
   border: 0;
   display: block;
@@ -194,10 +184,11 @@
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
   -ms-border-radius: 50px;
-  color: #fff;
+  color: #757575;
   font-size: 1em;
   font-weight: 100;
   letter-spacing: 0.1rem;
+  text-shadow: 1px 1px 1px #cccccc;
 }
 
 .modal input[type="submit"]:hover {
@@ -207,6 +198,9 @@
 .modal .forgot-pass {
   font-size: 0.9rem;
   padding: 0 30px 0 56px;
+  color: #606479;
+}
+.modal .my-1 {
   color: #606479;
 }
 .modal .my-1 a {

@@ -50,10 +50,10 @@ body {
         padding-right: 60px;
         margin-top: 20px;
         font-size: 4em;
-        color: $color1;
+        color: #cccccc;
         font-family: $font2;
-        text-shadow: 3px 2px 0px rgba(255, 255, 255, 0.45),
-          9px 8px 0px rgba(0, 0, 0, 0.15);
+        text-shadow: 3px 2px 0px rgba(255, 255, 255, 0.35),
+          9px 8px 0px rgba(0, 0, 0, 0.25);
       }
 
       p {
@@ -84,7 +84,8 @@ body {
       float: right;
       margin: 3px;
       input {
-        border: 0px;
+        border: 0;
+        outline: 0;
         border-radius: 5px;
         padding: 3px;
         height: 25px;
@@ -94,6 +95,7 @@ body {
       .button_1 {
         border-radius: 5px;
         margin-left: 10px;
+        outline: 0;
       }
     }
   }

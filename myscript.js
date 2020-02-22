@@ -1,8 +1,3 @@
-/*variabli per videon
-
-let bgVideo = document.getElementsByTagName("video")[0];
-*/
-
 //variabli per buttonin Login
 
 let loginButton = document.getElementById("loginbutton");
@@ -19,10 +14,11 @@ const span = document.getElementsByClassName("close");
 let wrapper = document.querySelector(".wrapper");
 
 //variablat per main menun ne versionin mobail
-// const menuja = document.getElementsByClassName("main")[0];
+const menuja = document.getElementsByClassName("main")[0];
 const butoniMenus = document.getElementsByClassName("icon")[0];
-var mobilMenu = document.getElementById("mobilmenu");
-var mobileLink = document.querySelectorAll("a.menulink");
+const mobilMenu = document.getElementById("mobilmenu");
+const mobileLink = document.querySelectorAll("a.menulink");
+const dropDaun = document.querySelectorAll(".dropdown");
 //Variablat per Drop menun ne versioni mobile
 // const htmlButton = menuja.children[0].children[0];
 // const cssButton = menuja.children[1].children[0];
@@ -63,14 +59,14 @@ backToLogin.addEventListener("click", function() {
 });
 
 //kur te klikojm te span te mbyllet Modal
-
-span[0].addEventListener("click", function() {
-  modalForm.style.display = "none";
-});
-
-span[1].addEventListener("click", function() {
-  modalForm.style.display = "none";
-});
+for (i = 0; i < 2; i++) {
+  span[i].addEventListener("click", function() {
+    modalForm.style.display = "none";
+  });
+}
+// span[1].addEventListener("click", function() {
+//   modalForm.style.display = "none";
+// });
 
 /*kur te klikojm brenda "class = Wrapper" ,
  "id = register" ose divit id = "id01" 
@@ -83,36 +79,34 @@ window.addEventListener("click", function() {
     event.target == modalForm
   ) {
     modalForm.style.display = "none";
-  } // else if (
-  //   event.target != butoniMenus ||
-  //   (event.target == mobileLink && mobilMenu.style.display === "none")
-  // ) {
-  //   mobilMenu.style.display = "none";
-  // } //  else {
-  //   mobilMenu.style.display = "block";
-  // }
+  }
 });
 
-//fuksioni per hapjen e menus ne versionin mobail
+//fuksioni per hapjen e mainmenus ne versionin mobail
 butoniMenus.addEventListener("click", function() {
+  // menuja.classList.toggle("show");
+  // mobilmenun e shtuar me vone
   if (mobilMenu.style.display === "block") {
     mobilMenu.style.display = "none";
   } else {
     mobilMenu.style.display = "block";
   }
+  closeDropdaun();
 });
 
 //mobilemenu
+function closeDropdaun() {
+  for (j = 0; j < dropDaun.length; j++) dropDaun[j].style.display = "none";
+}
 
-var i;
 for (i = 0; i < mobileLink.length; i++) {
   mobileLink[i].addEventListener("click", function() {
-    // this.classList.toggle("show");
-    var dropdown = this.nextElementSibling;
-    if (dropdown.style.display === "block") {
-      dropdown.style.display = "none";
-    } else {
+    closeDropdaun();
+    let dropdown = this.nextElementSibling;
+    if (dropdown.style.display === "none") {
       dropdown.style.display = "block";
+    } else {
+      dropdown.style.display = "none";
     }
   });
 }

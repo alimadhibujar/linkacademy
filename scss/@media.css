@@ -49,10 +49,6 @@
   body #showcase .content p {
     font-size: 1.5rem;
   }
-  /* modal */
-  .modal .wrapper-content {
-    width: 45%;
-  }
   /* newsletter */
   body #newsletter h1,
   body #newsletter form {

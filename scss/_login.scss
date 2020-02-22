@@ -8,10 +8,14 @@
   left: 0;
   top: 0;
   width: 100%;
+  @media (max-width: 500px) {
+    width: 90%;
+  }
+
   /* Full width */
   height: 100%;
   /* Full height */
-  overflow: auto;
+  overflow-x: hidden;
   /* Enable scroll if needed */
 }
 
@@ -71,6 +75,12 @@
 .modal .wrapper-content {
   position: relative;
   width: 25%;
+  @media (max-width: 768px) and (min-width: 500px) {
+    width: 50%;
+  }
+  @media (max-width: 500px) {
+    width: 70%;
+  }
   margin: 170px auto;
   background: #35394a;
   border-radius: 10px;

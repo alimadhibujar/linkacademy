@@ -6,7 +6,7 @@
   position: relative;
   text-align: center;
   display: none;
-  z-index: 2;
+  z-index: 1;
   a {
     border-left: 1px solid black;
     border-right: 1px solid black;
@@ -18,13 +18,13 @@
     text-transform: capitalize;
     font-family: monospace;
     display: block;
-    padding: 10px 20px;
+    padding: 15px 20px;
     font-size: 16px;
     // transition perdoret per te ndryshuar propertit e hoverit
-    transition: background 2s ease-in-out;
+    transition: background 1.5s ease-in-out;
     font-family: "Raleway", sans-serif;
     text-align: left;
-    animation: mobilemenu 0.3s ease-in-out forwards;
+    animation: mobilemenu 0.6s ease-in-out forwards;
     @media (min-width: 500px) {
       display: none;
     }
@@ -38,13 +38,11 @@
   }
   .dropdown {
     display: none;
-    background-color: black;
-    animation: dropdown 0.3s ease-in-out forwards;
     a {
       border: 2px solid rgba(23, 23, 50, 0.9);
       border-radius: 5px;
       text-align: center;
-      // animation: dropdown 0.3s ease-in-out forwards;
+      background-color: black;
     }
   }
   @keyframes mobilemenu {
@@ -57,24 +55,24 @@
       transform: scale(1);
     }
   }
-  // a:hover :first-of-type {
-  //   animation-delay: 0.3s;
-  // }
-  // a:hover :nth-of-type(2) {
-  //   animation-delay: 0.6s;
-  // }
-  // a:hover :nth-of-type(3) {
-  //   animation-delay: 0.9s;
-  // }
-  // a:hover :nth-of-type(4) {
-  //   animation-delay: 1.2s;
-  // }
-  // a:hover.menulink :nth-of-type(5) {
-  //   animation-delay: 1.5s;
-  // }
-  // a:hover.menulink :last-of-type {
-  //   animation-delay: 1.8s;
-  // }
+
+  .dropdown a:first-of-type {
+    animation: dropdown 0.3s ease-in-out forwards;
+    animation-delay: 0.3s;
+  }
+  .dropdown a:nth-of-type(2) {
+    animation: dropdown 0.3s ease-in-out forwards;
+    animation-delay: 0.6s;
+  }
+  .dropdown a:nth-of-type(3) {
+    animation: dropdown 0.3s ease-in-out forwards;
+    animation-delay: 0.9s;
+  }
+  .dropdown a:nth-of-type(4) {
+    animation: dropdown 0.3s ease-in-out forwards;
+    animation-delay: 1.2s;
+  }
+
   @keyframes dropdown {
     0% {
       opacity: 0;

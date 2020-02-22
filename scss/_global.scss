@@ -1,32 +1,32 @@
 /* Global */
 
-.container{
-  width:80%;
-  margin:auto;
-  overflow:hidden;
-  @media(max-width: 500px){
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  @media (max-width: 500px) {
     width: 90%;
   }
 }
 
-ul{
-  margin:0;
-  padding:0;
+ul {
+  margin: 0;
+  padding: 0;
 }
 
-.button_1{
-  height:31px;
-  background:#e8491d;
-  border:0;
+.button_1 {
+  height: 31px;
+  background: #e8491d;
+  border: 0;
   padding-left: 10px;
-  padding-right:10px;
-  color:#ffffff;
+  padding-right: 10px;
+  color: #ffffff;
 }
 
-.dark{
-  padding:15px;
-  background:#1C201A;
-  color:#636363;
-  margin-top:0px;
-  margin-bottom:10px;
+.dark {
+  padding: 15px;
+  background: #1c201a;
+  color: #636363;
+  margin-top: 0px;
+  margin-bottom: 10px;
 }

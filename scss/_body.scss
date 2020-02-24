@@ -108,6 +108,7 @@ body {
     .container {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
+      grid-column-gap: 0.75rem;
       @media (max-width: 768px) {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -117,7 +118,7 @@ body {
 
       .box {
         text-align: center;
-        margin: 0px 5px 10px;
+        margin-bottom: 10px;
         background-color: $color10;
         color: #636363;
         border-radius: 10px;

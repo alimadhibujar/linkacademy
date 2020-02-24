@@ -8,7 +8,7 @@
 
 @media (max-width: 500px) {
   .container {
-    width: 90%;
+    width: 95%;
   }
 }
 
@@ -157,7 +157,7 @@ header #branding #weblogo {
 
 @media (max-width: 500px) {
   header #branding #weblogo {
-    max-width: 275px;
+    max-width: 300px;
   }
 }
 
@@ -203,6 +203,12 @@ body #showcase {
   position: relative;
   height: auto;
   width: 100vw;
+}
+
+@media (max-width: 500px) {
+  body #showcase {
+    overflow: hidden;
+  }
 }
 
 body #showcase video {
@@ -251,7 +257,7 @@ body #showcase .content p {
 
 @media (max-width: 500px) {
   body #showcase .content p {
-    padding-top: 65px;
+    padding-top: 60px;
   }
 }
 
@@ -297,8 +303,6 @@ body #boxes .container {
   display: grid;
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
-  /*display:flex;
-    justify-content: space-between; */
 }
 
 @media (max-width: 768px) {
@@ -317,9 +321,6 @@ body #boxes .container {
 
 body #boxes .container .box {
   text-align: center;
-  /*float:left;
-      width:20%;
-      height: 380px;*/
   margin: 0px 5px 10px;
   background-color: #1C201A;
   color: #636363;
@@ -842,12 +843,6 @@ body #boxes .container .box img:hover {
   /* Enable scroll if needed */
 }
 
-@media (max-width: 500px) {
-  .modal {
-    width: 90%;
-  }
-}
-
 .modal .wrapper {
   width: 100%;
 }
@@ -916,15 +911,21 @@ body #boxes .container .box img:hover {
   padding: 20px 30px;
 }
 
+@media (max-width: 1200px) and (min-width: 769px) {
+  .modal .wrapper-content {
+    width: 35%;
+  }
+}
+
 @media (max-width: 768px) and (min-width: 500px) {
   .modal .wrapper-content {
-    width: 50%;
+    width: 45%;
   }
 }
 
 @media (max-width: 500px) {
   .modal .wrapper-content {
-    width: 70%;
+    width: 80%;
   }
 }
 

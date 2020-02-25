@@ -52,6 +52,10 @@ body {
       h1 {
         padding-right: 60px;
         margin-top: 20px;
+        @media (max-width: 768px) {
+          font-size: 3rem;
+          margin-top: 15px;
+        }
         font-size: 4em;
         color: #cccccc;
         font-family: $font2;
@@ -65,7 +69,7 @@ body {
         font-size: 2rem;
         font-family: $font2;
         @media (max-width: 500px) {
-          padding-top: 60px;
+          padding-top: 70px;
         }
       }
     }

@@ -248,6 +248,13 @@ body #showcase .content h1 {
   text-shadow: 3px 2px 0px rgba(255, 255, 255, 0.35), 9px 8px 0px rgba(0, 0, 0, 0.25);
 }
 
+@media (max-width: 768px) {
+  body #showcase .content h1 {
+    font-size: 3rem;
+    margin-top: 15px;
+  }
+}
+
 body #showcase .content p {
   margin: 0;
   padding-top: 100px;
@@ -257,7 +264,7 @@ body #showcase .content p {
 
 @media (max-width: 500px) {
   body #showcase .content p {
-    padding-top: 60px;
+    padding-top: 70px;
   }
 }
 
@@ -1219,10 +1226,6 @@ footer .social-media-buttons .social-media-button.codepen:hover i {
     width: 480px;
     height: auto;
   }
-  body #showcase .content h1 {
-    font-size: 3rem;
-    margin-top: 30px;
-  }
   body #showcase .content p {
     font-size: 1.5rem;
   }
@@ -1375,9 +1378,7 @@ footer .social-media-buttons .social-media-button.codepen:hover i {
 }
 
 #mobilmenu {
-  width: 90%;
-  margin: 0 auto;
-  overflow: hidden;
+  width: 100%;
   background-color: rgba(23, 23, 50, 0.9);
   position: relative;
   text-align: center;

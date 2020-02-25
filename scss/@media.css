@@ -42,10 +42,6 @@
     width: 480px;
     height: auto;
   }
-  body #showcase .content h1 {
-    font-size: 3rem;
-    margin-top: 30px;
-  }
   body #showcase .content p {
     font-size: 1.5rem;
   }

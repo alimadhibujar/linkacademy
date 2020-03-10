@@ -1,7 +1,8 @@
 /* Global */
 @import url("https://fonts.googleapis.com/css?family=Mr+De+Haviland|Tangerine&display=swap");
 .container {
-  width: 80%;
+  width: 90%;
+  max-width: 1100px;
   margin: auto;
   overflow: hidden;
 }
@@ -34,7 +35,6 @@ ul {
   margin-bottom: 10px;
 }
 
-/* Header */
 header {
   color: #ffffff;
   padding-top: 30px;
@@ -42,50 +42,72 @@ header {
   border-bottom: #6405e2 2px solid;
 }
 
-header nav {
-  float: right;
-  margin-top: 55px;
+@media (max-width: 768px) {
+  header {
+    padding-top: 0px;
+  }
 }
 
-header nav a {
-  color: #ffffff;
-  opacity: 0.7;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 20px;
+header .container {
+  margin-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
-header nav a i {
-  font-size: 1.2rem;
-  margin: 0px 5px 0 0;
+@media (max-width: 768px) {
+  header .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
-header nav a:hover {
-  color: #cccccc;
-  font-weight: bold;
+header .container nav {
+  width: 350px;
 }
 
-header nav a:hover i {
-  color: #cccccc;
-  font-weight: bold;
+@media (min-width: 769px) and (max-width: 900px) {
+  header .container nav {
+    width: 300px;
+  }
 }
 
-header nav .current a {
-  color: #e8491d;
+@media (max-width: 768px) {
+  header .container nav {
+    margin: 15px 0;
+  }
 }
 
-header nav .current a i {
-  color: #e8491d;
+header .container nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-header nav li {
-  display: inline;
-  padding: 0 0.75rem;
+header .container nav ul li {
   background-color: black;
   opacity: 0.7;
 }
 
-header nav li #loginbutton {
+header .container nav ul li #loginbutton {
   color: #ffffff;
   background-color: black;
   opacity: 0.7;
@@ -93,80 +115,83 @@ header nav li #loginbutton {
   font-size: 20px;
   border: 0px;
   outline: none;
+  padding: 0;
 }
 
-@media (max-width: 500px) {
-  header nav li #loginbutton {
-    padding: 0px;
-  }
-}
-
-header nav li #loginbutton i {
+header .container nav ul li #loginbutton i {
+  display: inline;
   font-size: 1rem;
   margin: 0px 5px 0 0;
 }
 
-header nav li #loginbutton:hover {
+header .container nav ul li #loginbutton:hover {
   color: #cccccc;
   font-weight: bold;
 }
 
-header nav li #loginbutton:focus {
+header .container nav ul li #loginbutton:focus {
   color: #e8491d;
   font-weight: bold;
 }
 
-header nav li .active {
+header .container nav ul li a {
+  color: #ffffff;
+  opacity: 0.7;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+header .container nav ul li a i {
+  font-size: 1.2rem;
+  margin: 0px 5px 0 0;
+}
+
+header .container nav ul li a:hover {
+  color: #cccccc;
+  font-weight: bold;
+}
+
+header .container nav ul li a:hover i {
+  color: #cccccc;
+  font-weight: bold;
+}
+
+header .container nav ul .current a {
   color: #e8491d;
 }
 
-header #branding {
-  float: left;
-  margin-top: 10px;
+header .container nav ul .current a i {
+  color: #e8491d;
 }
 
-@media only screen and (max-width: 1100px) {
-  header #branding {
-    margin-top: 30px;
-  }
-}
-
-header #branding h1 {
-  margin-bottom: 15px;
-  font-family: "Tangerine";
-  font-size: 3.5rem;
-  background-color: black;
-  text-shadow: #5a696f 4px 4px 6px;
-  opacity: 0.7;
-}
-
-header #branding #weblogo {
-  max-width: 100%;
-  height: auto;
+header #weblogo {
+  width: 500px;
   -webkit-transition: -webkit-transform 1.8s ease-in-out;
   transition: -webkit-transform 1.8s ease-in-out;
   transition: transform 1.8s ease-in-out;
   transition: transform 1.8s ease-in-out, -webkit-transform 1.8s ease-in-out;
 }
 
-@media only screen and (max-width: 1100px) {
-  header #branding #weblogo {
-    max-width: 362px;
+@media (min-width: 501px) and (max-width: 1000px) {
+  header #weblogo {
+    width: 390px;
+    margin: 8px 0 2px 0;
   }
 }
 
 @media (max-width: 500px) {
-  header #branding #weblogo {
-    max-width: 300px;
+  header #weblogo {
+    width: 330px;
   }
 }
 
-header #branding #weblogo:hover {
+header #weblogo:hover {
   -webkit-transform: rotateY(360deg);
           transform: rotateY(360deg);
 }
 
-header #branding .highlight {
+header .highlight {
   color: #6405e2;
   font-weight: bold;
   padding: 0 5px 0 5px;
@@ -1184,43 +1209,6 @@ footer .social-media-buttons .social-media-button.codepen:hover i {
 
 /* Media Queries */
 @media (max-width: 768px) {
-  header {
-    padding: 1rem 0 0;
-  }
-  header #branding,
-  header nav,
-  header nav li {
-    float: none;
-    text-align: center;
-    width: 100%;
-  }
-  header nav {
-    margin: 0;
-    padding-bottom: 10px;
-  }
-  header nav li {
-    padding: 0 25px;
-  }
-}
-
-@media (max-width: 768px) and (max-width: 500px) {
-  header nav li {
-    padding: 0px;
-    margin: 0 7px;
-  }
-}
-
-@media (max-width: 768px) {
-  header #branding {
-    margin: 0;
-    padding-bottom: 15px;
-  }
-  #weblogo {
-    float: none;
-    width: 360px;
-    height: auto;
-    margin: 0;
-  }
   /* showcase */
   body #showcase video {
     width: 480px;
@@ -1293,39 +1281,6 @@ footer .social-media-buttons .social-media-button.codepen:hover i {
   footer .container p {
     padding-bottom: 10px;
   }
-  /*#main article#main-col {
-     float: none;
-     width: 100%;
-     margin-bottom: 10px;
-     padding: 0;
-   }
- 
-   #main article#main-col h1.dark{
-     padding-top: 15px;
-     border-top-left-radius: 10px;
-     border-top-right-radius: 10px;
-   }
- 
-   #main article#main-col p{
-     padding:0 10px 10px 10px;
-     text-align: left;
-   }*/
-  /* #main aside#sidebar{
-     float: none;
-     width: 100%;
-     margin-bottom: 10px;
-   }
- 
-   #main aside#sidebar .dark{
-     padding-bottom: 10px;
-   }
-   #main aside#sidebar .dark p{
-     padding:0 10px 10px 10px;
-     text-align: left;
-   }
-   #main aside#sidebar .dark h3{
-     margin: 0 0 1rem;
-   }*/
 }
 
 /* Main-col */

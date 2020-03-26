@@ -112,7 +112,7 @@ body {
     .container {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      grid-column-gap: 0.75rem;
+      // grid-column-gap: 0.75rem;
       @media (max-width: 768px) {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -122,10 +122,26 @@ body {
 
       .box {
         text-align: center;
-        margin-bottom: 10px;
+        margin: 0 6px 10px 6px;
+        @media (max-width: 768px) {
+          margin: 0 5px 10px;
+        }
         background-color: $color10;
         color: #636363;
         border-radius: 10px;
+        box-shadow: 0 0 2px rgba(84, 160, 255, 0.5),
+          inset 0 0 3px rgba(123, 237, 159, 0.15);
+        transition: box-shadow 0.75s ease, transform 0.75s ease,
+          margin-top 0.75s;
+        &:hover {
+          box-shadow: 0 8px 40px rgba(#fff, 0.15); /*rgba(255, 242, 0, 0.3)*/
+          transform: scale(1.05);
+          margin-top: 10px;
+
+          img {
+            transform: rotateY(360deg);
+          }
+        }
         p {
           text-align: left;
           margin: 0.5rem 0.75rem;
@@ -136,9 +152,6 @@ body {
         width: 90px;
         margin-top: 1rem;
         transition: transform 1.8s ease-in-out;
-      }
-      .box img:hover {
-        transform: rotateY(360deg);
       }
     }
   }

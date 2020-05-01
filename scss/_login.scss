@@ -12,55 +12,71 @@
   height: 100%;
   /* Full height */
   overflow-x: hidden;
-  /* Enable scroll if needed */
 }
 
 .modal .wrapper {
   width: 100%;
   #register {
     .wrapper-content {
-      color: #757575;
-      .large {
-        text-shadow: 1px 1px 1px #cccccc;
-      }
+      color: #2ea1ff;
+      text-shadow: 1px 1px 1px #002a9c, 1px 1px 1px #cccccc;
+
       .form {
+        color: #2ea1ff;
+        text-shadow: 1px 1px 1px #002a9c, 1px 1px 1px #cccccc;
         .btn {
           width: 50%;
           border: 0;
-          border-radius: 5px;
+          border-radius: 20px;
           height: 30px;
           padding-left: 5px;
           text-align: center;
           background-color: #1a1c1d;
-          color: #757575;
+          color: #2ea1ff;
+          text-shadow: 1px 1px 1px #002a9c;
           font-size: 1rem;
+          box-shadow: -3px -3px 2px rgba(255, 255, 255, 0.1),
+            3px 3px 2px rgba(0, 0, 0, 0.65);
+          &:hover {
+            box-shadow: -2px -2px 2px rgba(255, 255, 255, 0.1),
+              2px 2px 2px rgba(0, 0, 0, 0.65);
+          }
+          &:active {
+            color: blue;
+            box-shadow: inset -1px -1px 1px rgba(255, 255, 255, 0.1),
+              inset 1px 1px 1px rgba(0, 0, 0, 0.65);
+          }
         }
-        .btn:hover {
-          color: blue;
-          background-color: #fff;
-        }
+
         .form-group {
           margin-bottom: 20px;
           input {
             width: 90%;
             border: 0;
-            border-radius: 5px;
-            height: 30px;
+            border-radius: 20px;
+            height: 35px;
             margin: 0;
-            padding: 0 3px 0 10px;
+            padding: 0 3px 0 15px;
             text-align: left;
             background-color: #1a1c1d;
-            color: #272a35;
+            color: #2ea1ff;
+            text-shadow: 1px 1px 1px #002a9c;
             font-size: 1rem;
-            font-weight: 500;
-          }
-          input:hover {
-            background-color: #fff;
+            transition: all 0.75s linear;
+            &::placeholder {
+              font-size: 12px;
+              transition: all 0.75s linear;
+            }
+            &:focus {
+              background-color: #111;
+              &::placeholder {
+                transform: translateX(70%);
+              }
+            }
           }
           .form-text {
             padding-left: 10px;
             width: 90%;
-            color: #757575;
           }
         }
       }
@@ -79,7 +95,6 @@
   }
   @media (max-width: 500px) {
     width: 80%;
-    // margin-left: 21px;
   }
   margin: 170px auto;
   background: #35394a;
@@ -90,145 +105,162 @@
 }
 
 .modal .wrapper-content button {
-  width: 45%;
+  width: 40%;
   padding: 11px 0 24px;
-  box-shadow: 1px 1px 2px #040e16, inset -1px -1px 2px #040e16;
   outline: initial;
-  background-color: black;
-  border-radius: 10px;
-  color: #fff;
-  border: 1px solid #282a2c;
-  transition: transform 1.8s ease-in-out;
+  background-color: rgb(48, 52, 68);
+  border-radius: 50px;
+  color: #000;
+  border: 0px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: -3px -3px 2px rgba(255, 255, 255, 0.15),
+    3px 3px 2px rgba(0, 0, 0, 0.65);
+  &:last-of-type {
+    margin-left: 10px;
+  }
+  &:hover {
+    box-shadow: -2px -2px 2px rgba(255, 255, 255, 0.1),
+      2px 2px 2px rgba(0, 0, 0, 0.65);
+  }
+  &:active {
+    box-shadow: inset -1px -1px 1px rgba(255, 255, 255, 0.1),
+      inset 1px 1px 1px rgba(0, 0, 0, 0.65);
+  }
 }
-
-.modal .wrapper-content .facebook {
-  background: #45619d;
+.modal .wrapper-content button.facebook {
+  margin-right: 10px;
+  color: #c2c2c2;
 }
 
 .modal .wrapper-content button i {
   position: absolute;
   font-size: 20px;
 }
-.modal .wrapper-content button:hover {
-  transform: rotateX(360deg);
-}
-
-.modal .wrapper .hed-fb {
-  display: inline;
-  position: relative;
-}
 
 .modal .or-email {
   font-size: 1rem;
   letter-spacing: 0.1rem;
   text-align: center;
-  color: #757575;
+  color: #2ea1ff;
+  text-shadow: 1px 1px 1px #002a9c, 1px 1px 1px #c2c2c2;
   line-height: 5rem;
-  text-shadow: 1px 1px 1px #4d4d4d;
 }
 .modal form {
   border: 0;
   display: block;
   width: 100%;
+  color: #2ea1ff;
+  text-shadow: 1px 1px 1px #002a9c;
 }
 .modal form i {
   position: relative;
   top: 32px;
   display: flex;
   font-size: 1em;
-  color: #757575;
-  width: 5%;
+  color: #2ea1ff;
+  text-shadow: 1px 1px 1px #002a9c;
+  width: 1em;
 }
 .modal input[type="text"],
-.modal input[type="password"] {
+.modal input[type="password"],
+.modal input[type="email"] {
   margin-left: 15px;
   font-size: 1em;
-  font-weight: 600;
   letter-spacing: 0.1rem;
-  padding: 0 3px;
+  padding: 0 0 0 13px;
   outline: none;
+  box-shadow: inset -2px -2px 1px rgba(255, 255, 255, 0.15),
+    inset 3px 3px 3px rgba(0, 0, 0, 0.65);
+  border-radius: 20px;
+}
+.modal input[type="text"] {
+  margin-bottom: 15px;
 }
 
-.modal .user-name,
 .modal .user-pasword,
 .modal .user-email {
-  border-bottom: 1px solid #4d4d4d;
+  color: #2ea1ff;
+  &::placeholder {
+    color: #2ea1ff;
+    font-size: 12px;
+    transition: all 0.75s linear;
+  }
+  &:focus {
+    &::placeholder {
+      transform: translateX(75%);
+    }
+  }
 }
 
-.modal .user-pasword:hover {
-  background-color: #272a2c;
-  border-radius: 10px;
-}
-
+.modal .user-pasword:hover,
 .modal .user-email:hover {
   background-color: #272a2c;
-  border-radius: 10px;
 }
 
 .modal input {
   border: 0;
-  width: 90%;
-  height: 50px;
+  width: 85%;
+  height: 45px;
   background-color: transparent;
-}
-
-.modal input:focus {
-  outline: initial;
 }
 
 .modal .logout {
   display: inline-block;
-  width: 30%;
+  width: 35%;
   text-align: center;
-  background-color: rgba(39, 42, 44, 0.23);
   padding: 2px;
-  margin: 60px 0 10px;
+  margin: 60px 0 30px;
   border-radius: 50px;
-  border: 2px solid #1d201a;
-  color: #dc6180;
+  border: 0px;
+  box-shadow: -3px -3px 2px rgba(255, 255, 255, 0.1),
+    3px 3px 2px rgba(0, 0, 0, 0.65);
+  &:hover {
+    box-shadow: -2px -2px 2px rgba(255, 255, 255, 0.1),
+      2px 2px 2px rgba(0, 0, 0, 0.65);
+  }
+  &:active {
+    box-shadow: inset -1px -1px 1px rgba(255, 255, 255, 0.1),
+      inset 1px 1px 1px rgba(0, 0, 0, 0.65);
+  }
 }
 
 .modal input[type="submit"] {
   height: 30px;
-  border-radius: 50px;
+  border-radius: 20px;
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
   -ms-border-radius: 50px;
-  color: #757575;
+  color: #2ea1ff;
+  text-shadow: 1px 1px 1px #002a9c;
   font-size: 1em;
   font-weight: 100;
   letter-spacing: 0.1rem;
-  text-shadow: 1px 1px 1px #cccccc;
-}
-
-.modal input[type="submit"]:hover {
-  background-color: #1a1c1d;
+  outline: none;
 }
 
 .modal .forgot-pass {
   font-size: 0.9rem;
   padding: 0 30px 0 56px;
-  color: #606479;
+  color: #2ea1ff;
 }
 .modal .my-1 {
-  color: #606479;
-}
-.modal .my-1 a {
-  font-size: 1rem;
-  font-weight: 700;
+  color: #2ea1ff;
+  a {
+    font-size: 1rem;
+    font-weight: 700;
+  }
 }
 
 .modal .close {
   position: absolute;
   right: 15px;
   top: 5px;
-  color: #cccccc;
+  color: #2ea1ff;
+  text-shadow: 1px 1px 1px #002a9c;
   font-size: 25px;
   z-index: 3;
-}
-
-.modal .close:hover,
-.modal .close:focus {
-  color: red;
-  cursor: pointer;
+  &:hover {
+    color: red;
+    cursor: pointer;
+  }
 }

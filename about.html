@@ -47,7 +47,7 @@
           font: "10px monospace",
           lineFont: "10px monospace",
           lineHeight: 20, //px
-          lineWidth: 480
+          lineWidth: 480,
         },
         tick = 0,
         wait = 0,
@@ -59,7 +59,7 @@
         this.wait = 0;
         this.hue = (tick * opts.hueSpeed) % 360;
       }
-      Rainbow.prototype.step = function() {
+      Rainbow.prototype.step = function () {
         ++this.wait;
 
         if (this.wait >= opts.waitsOnLine) {
@@ -114,7 +114,7 @@
 
       document.body.appendChild(c);
       window.addEventListener("DOMContentLoaded", init);
-      window.addEventListener("resize", function() {
+      window.addEventListener("resize", function () {
         w = c.width = window.innerWidth;
         h = c.height = window.innerHeight;
 
@@ -124,16 +124,13 @@
         ctx.fillRect(0, 0, w, h);
         ctx.font = opts.font;
       });
-      c.addEventListener("click", function() {
+      c.addEventListener("click", function () {
         ctx.fillStyle = "black";
         ctx.fillRect(0, 0, w, h);
 
         s.reverse();
         for (var i = 0; i < s.length; ++i)
-          s[i] = s[i]
-            .split("")
-            .reverse()
-            .join("");
+          s[i] = s[i].split("").reverse().join("");
       });
     </script>
 
@@ -147,10 +144,11 @@
               <a href="index.html"><i class="fas fa-home"></i>Home</a>
             </li>
             <li class="current"><a href="about.html">About</a></li>
+
             <li>
-              <button id="loginbutton">
-                <i class="fas fa-user"></i>Log in
-              </button>
+              <a href="javascript:void(0);" id="loginbutton"
+                ><i class="fas fa-user"></i>Log in</a
+              >
             </li>
           </ul>
         </nav>
@@ -275,7 +273,7 @@
 
       <div class="content">
         <h1 class="animated infinite pulse delay-2s">
-          <span class="highlight">Professional</span> Web Design
+          Professional Web Design
         </h1>
         <p>
           Ofrojmë falas një formim cilësor, i cili ndryshon jetën e kujtdo që
@@ -365,10 +363,41 @@
 
     <section id="newsletter">
       <div class="container">
-        <h1>Anëtarësohu në newsletter-in tonë</h1>
+        <div class="wave">
+          <span style="--i: 1;">A</span>
+          <span style="--i: 2;">n</span>
+          <span style="--i: 3;">t</span>
+          <span style="--i: 4;">a</span>
+          <span style="--i: 5;">r</span>
+          <span style="--i: 6;">s</span>
+          <span style="--i: 7;">o</span>
+          <span style="--i: 8;">h</span>
+          <span style="--i: 9;">u</span>
+          <span style="--i: 10;"></span>
+          <span style="--i: 11;">n</span>
+          <span style="--i: 12;">ë</span>
+          <span style="--i: 13;"></span>
+          <span style="--i: 14;">n</span>
+          <span style="--i: 15;">e</span>
+          <span style="--i: 16;">w</span>
+          <span style="--i: 17;">s</span>
+          <span style="--i: 18;">l</span>
+          <span style="--i: 19;">e</span>
+          <span style="--i: 20;">t</span>
+          <span style="--i: 21;">t</span>
+          <span style="--i: 22;">r</span>
+          <span style="--i: 23;">-</span>
+          <span style="--i: 24;">i</span>
+          <span style="--i: 25;">n</span>
+          <span style="--i: 26;"></span>
+          <span style="--i: 27;">t</span>
+          <span style="--i: 28;">o</span>
+          <span style="--i: 29;">n</span>
+          <span style="--i: 30;">ë</span>
+        </div>
         <form>
           <input type="email" placeholder="  Vendosni Emailin Tuaj Këtu..." />
-          <button type="submit" class="button_1">Regjistrohu</button>
+          <button class="button">Submit</button>
         </form>
       </div>
     </section>

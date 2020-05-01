@@ -10,33 +10,29 @@
   body #showcase .content p {
     font-size: 1.5rem;
   }
-
-  /* newsletter */
-  body #newsletter h1,
-  body #newsletter form {
-    float: none;
-    width: 100%;
-    display: block;
+  // Newsletter
+  body #newsletter .container {
+    flex-direction: column;
   }
-  body #newsletter h1 {
-    margin: 0px;
-    padding-top: 0px;
+  body #newsletter .container .wave,
+  body #newsletter .container form,
+  body #newsletter .container form .button,
+  body #newsletter .container form input[type="email"] {
+    width: 100%;
+    flex-direction: column;
     text-align: center;
+    letter-spacing: 2px;
   }
-  body #newsletter .container form button.button_1 {
-    display: block;
-    width: 100%;
-    margin: 0 0 5px 0;
-    padding: 4px 0;
+
+  body #newsletter .container form {
+    margin: 5px 0;
   }
-  body #newsletter form {
-    margin: 0;
+  body #newsletter .container form .button {
+    margin: 0 5px 5px 5px;
+    padding: 0.525rem 0;
   }
-  body #newsletter form input[type="email"],
-  .quote input,
-  .quote textarea {
-    width: 100%;
-    margin-bottom: 5px;
+  body #newsletter .container form input {
+    margin: 5px 0 6px 0;
     padding: 4px 0;
   }
 

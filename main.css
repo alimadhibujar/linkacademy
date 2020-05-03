@@ -306,6 +306,7 @@ body #showcase .content p {
   font-family: "Tangerine";
   color: #ccc;
   background-image: -webkit-linear-gradient(92deg, #5352ed, #eccc68);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-animation: hue 10s infinite linear;

@@ -64,13 +64,13 @@ body {
         font-family: $font2;
         text-shadow: 3px 2px 0px rgba(32, 101, 197, 0.7),
           9px 8px 0px rgba(0, 0, 0, 0.35);
-        animation: pulse 2s ease-in-out 2s infinite alternate;
+        animation: pulse 3s ease-in-out 2s infinite alternate;
         @keyframes pulse {
           from {
-            transform: scale(1);
+            transform: translateX(20px) scale(1) rotateX(-35deg);
           }
           to {
-            transform: scale(1.03, 1.07) rotateX(-35deg) translateX(-10px);
+            transform: translateX(-5px) scale(1.03, 1.07) rotateX(35deg);
           }
         }
       }

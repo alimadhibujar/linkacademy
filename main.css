@@ -278,8 +278,8 @@ body #showcase .content h1 {
 
 @-webkit-keyframes pulse {
   from {
-    -webkit-transform: translateX(20px) scale(1) rotateX(-35deg);
-            transform: translateX(20px) scale(1) rotateX(-35deg);
+    -webkit-transform: translateX(20px) scale(1) skewX(35deg) rotateX(-35deg);
+            transform: translateX(20px) scale(1) skewX(35deg) rotateX(-35deg);
   }
   to {
     -webkit-transform: translateX(-5px) scale(1.03, 1.07) rotateX(35deg);
@@ -289,8 +289,8 @@ body #showcase .content h1 {
 
 @keyframes pulse {
   from {
-    -webkit-transform: translateX(20px) scale(1) rotateX(-35deg);
-            transform: translateX(20px) scale(1) rotateX(-35deg);
+    -webkit-transform: translateX(20px) scale(1) skewX(35deg) rotateX(-35deg);
+            transform: translateX(20px) scale(1) skewX(35deg) rotateX(-35deg);
   }
   to {
     -webkit-transform: translateX(-5px) scale(1.03, 1.07) rotateX(35deg);

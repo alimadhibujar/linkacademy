@@ -67,7 +67,7 @@ body {
         animation: pulse 3s ease-in-out 2s infinite alternate;
         @keyframes pulse {
           from {
-            transform: translateX(20px) scale(1) rotateX(-35deg);
+            transform: translateX(20px) scale(1) skewX(35deg) rotateX(-35deg);
           }
           to {
             transform: translateX(-5px) scale(1.03, 1.07) rotateX(35deg);

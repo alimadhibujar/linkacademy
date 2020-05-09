@@ -108,6 +108,7 @@
 
     .drop li {
       opacity: 0;
+      display: none;
       transform-origin: top center;
       background-color: black;
       border-radius: 5px;
@@ -118,7 +119,18 @@
       }
     }
   }
+
+  .main li:hover .menu1 li,
+  .main li:hover .menu2 li,
+  .main li:hover .menu3 li,
+  .main li:hover .menu4 li,
+  .main li:hover .menu5 li,
+  .main li:hover .menu6 li {
+    display: block;
+  }
+
   /*------------- menu1 animation -------------------*/
+
   li:hover .menu1 li:first-of-type {
     animation: menu1 0.3s ease-in-out forwards;
     animation-delay: 0.3s;

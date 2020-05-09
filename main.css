@@ -709,6 +709,7 @@ body #boxes .container img {
 
 #menuja li .drop li {
   opacity: 0;
+  display: none;
   -webkit-transform-origin: top center;
           transform-origin: top center;
   background-color: black;
@@ -719,6 +720,20 @@ body #boxes .container img {
   padding: 8px 0;
   border-bottom: 0;
   margin-top: 2px;
+}
+
+#menuja .main li:hover .menu1 li, #menuja .show li:hover .menu1 li,
+#menuja .main li:hover .menu2 li,
+#menuja .show li:hover .menu2 li,
+#menuja .main li:hover .menu3 li,
+#menuja .show li:hover .menu3 li,
+#menuja .main li:hover .menu4 li,
+#menuja .show li:hover .menu4 li,
+#menuja .main li:hover .menu5 li,
+#menuja .show li:hover .menu5 li,
+#menuja .main li:hover .menu6 li,
+#menuja .show li:hover .menu6 li {
+  display: block;
 }
 
 #menuja li:hover .menu1 li:first-of-type {

@@ -722,17 +722,7 @@ body #boxes .container img {
   margin-top: 2px;
 }
 
-#menuja .main li:hover .menu1 li, #menuja .show li:hover .menu1 li,
-#menuja .main li:hover .menu2 li,
-#menuja .show li:hover .menu2 li,
-#menuja .main li:hover .menu3 li,
-#menuja .show li:hover .menu3 li,
-#menuja .main li:hover .menu4 li,
-#menuja .show li:hover .menu4 li,
-#menuja .main li:hover .menu5 li,
-#menuja .show li:hover .menu5 li,
-#menuja .main li:hover .menu6 li,
-#menuja .show li:hover .menu6 li {
+#menuja li:hover .drop li {
   display: block;
 }
 

@@ -118,15 +118,11 @@
         margin-top: 2px;
       }
     }
-  }
-
-  .main li:hover .menu1 li,
-  .main li:hover .menu2 li,
-  .main li:hover .menu3 li,
-  .main li:hover .menu4 li,
-  .main li:hover .menu5 li,
-  .main li:hover .menu6 li {
-    display: block;
+    &:hover {
+      .drop li {
+        display: block;
+      }
+    }
   }
 
   /*------------- menu1 animation -------------------*/

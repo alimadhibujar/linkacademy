@@ -60,11 +60,35 @@ body {
           margin-top: 15px;
         }
         font-size: 4em;
-        color: #c2c2c2;
+        // color: #c2c2c2;
         font-family: $font2;
         text-shadow: 3px 2px 0px rgba(32, 101, 197, 0.7),
           9px 8px 0px rgba(0, 0, 0, 0.35);
-        animation: pulse 3s ease-in-out 2s infinite alternate;
+        animation: pulse 3s ease-in-out 2s infinite alternate,
+          appear 1.5s linear forwards 2s, roll 5s linear infinite;
+        background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/439415/146x263.png");
+        color: transparent;
+        -webkit-background-clip: text;
+        -o-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        @keyframes appear {
+          0% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 1;
+          }
+        }
+
+        @keyframes roll {
+          0% {
+            background-position: right 0 top 0;
+          }
+          100% {
+            background-position: right 0 top -146px;
+          }
+        }
         @keyframes pulse {
           from {
             transform: translateX(20px) scale(1) skewX(35deg) rotateX(-35deg);

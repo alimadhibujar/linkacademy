@@ -1811,7 +1811,7 @@ footer .social-media-buttons .social-media-button.codepen:hover i {
   border-radius: 4px;
   text-decoration: none;
   color: #ffffff;
-  opacity: 0.95;
+  opacity: 0;
   text-transform: capitalize;
   font-family: monospace;
   display: block;

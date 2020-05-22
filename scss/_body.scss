@@ -60,12 +60,13 @@ body {
           margin-top: 15px;
         }
         font-size: 4em;
+        opacity: 0;
         // color: #c2c2c2;
         font-family: $font2;
         text-shadow: 3px 2px 0px rgba(32, 101, 197, 0.7),
           9px 8px 0px rgba(0, 0, 0, 0.35);
-        animation: swing 3s ease-in-out 2s infinite alternate,
-          appear 1.5s linear forwards 2s, roll 5s linear 2s infinite;
+        animation: swing 3s ease-in-out 0.5s infinite alternate,
+          appear 1.5s linear forwards 0.5s, roll 5s linear 0.5s infinite;
         // background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/439415/146x263.png");
         background-image: url(https://i.postimg.cc/xjm6vPNd/bg.png);
         color: transparent;

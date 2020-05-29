@@ -319,8 +319,8 @@ body #showcase .content h1 {
   opacity: 0;
   font-family: "Tangerine";
   text-shadow: 3px 2px 0px rgba(32, 101, 197, 0.7), 9px 8px 0px rgba(0, 0, 0, 0.35);
-  -webkit-animation: swing 3s ease-in-out 0.5s infinite alternate, appear 1.5s linear forwards 0.5s, roll 5s linear 0.5s infinite;
-          animation: swing 3s ease-in-out 0.5s infinite alternate, appear 1.5s linear forwards 0.5s, roll 5s linear 0.5s infinite;
+  -webkit-animation: appear 2.5s linear forwards 0.5s 1, swing 3s ease-in-out 0.5s infinite alternate, roll 5s linear 0.5s infinite;
+          animation: appear 2.5s linear forwards 0.5s 1, swing 3s ease-in-out 0.5s infinite alternate, roll 5s linear 0.5s infinite;
   background-image: url(https://i.postimg.cc/xjm6vPNd/bg.png);
   color: transparent;
   -webkit-background-clip: text;
@@ -335,20 +335,28 @@ body #showcase .content h1 {
 }
 
 @-webkit-keyframes appear {
-  0% {
+  from {
     opacity: 0;
+    -webkit-transform: scale 0.1;
+            transform: scale 0.1;
   }
-  100% {
+  to {
     opacity: 1;
+    -webkit-transform: scale 1;
+            transform: scale 1;
   }
 }
 
 @keyframes appear {
-  0% {
+  from {
     opacity: 0;
+    -webkit-transform: scale 0.1;
+            transform: scale 0.1;
   }
-  100% {
+  to {
     opacity: 1;
+    -webkit-transform: scale 1;
+            transform: scale 1;
   }
 }
 
@@ -418,18 +426,22 @@ body #showcase .content p {
 @-webkit-keyframes hue {
   from {
     -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
   }
   to {
     -webkit-filter: hue-rotate(-360deg);
+            filter: hue-rotate(-360deg);
   }
 }
 
 @keyframes hue {
   from {
     -webkit-filter: hue-rotate(0deg);
+            filter: hue-rotate(0deg);
   }
   to {
     -webkit-filter: hue-rotate(-360deg);
+            filter: hue-rotate(-360deg);
   }
 }
 

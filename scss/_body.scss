@@ -65,8 +65,9 @@ body {
         font-family: $font2;
         text-shadow: 3px 2px 0px rgba(32, 101, 197, 0.7),
           9px 8px 0px rgba(0, 0, 0, 0.35);
-        animation: swing 3s ease-in-out 0.5s infinite alternate,
-          appear 1.5s linear forwards 0.5s, roll 5s linear 0.5s infinite;
+        animation: appear 2.5s linear forwards 0.5s 1,
+          swing 3s ease-in-out 0.5s infinite alternate,
+          roll 5s linear 0.5s infinite;
         // background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/439415/146x263.png");
         background-image: url(https://i.postimg.cc/xjm6vPNd/bg.png);
         color: transparent;
@@ -75,11 +76,13 @@ body {
         -moz-background-clip: text;
         background-clip: text;
         @keyframes appear {
-          0% {
+          from {
             opacity: 0;
+            transform: scale 0.1;
           }
-          100% {
+          to {
             opacity: 1;
+            transform: scale 1;
           }
         }
 
@@ -108,7 +111,7 @@ body {
         font-weight: bold;
         font-family: $font2;
         color: #ccc;
-        // background-image: -webkit-linear-gradient(92deg, #5352ed, #eccc68);
+        // background-image: linear-gradient(92deg, #5352ed, #eccc68);
         // background-image: linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%);
         background-image: linear-gradient(
           45deg,
@@ -129,14 +132,11 @@ body {
       }
       @keyframes hue {
         from {
-          -webkit-filter: hue-rotate(0deg);
+          filter: hue-rotate(0deg);
         }
         to {
-          -webkit-filter: hue-rotate(-360deg);
+          filter: hue-rotate(-360deg);
         }
-        // to {
-        //   filter: hue-rotate(360deg);
-        // }
       }
     }
   }

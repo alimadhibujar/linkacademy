@@ -187,95 +187,55 @@ header #weblogo:hover {
 
 @-webkit-keyframes shake {
   0% {
-    -webkit-transform: translate(1px, 1px) rotate(0deg);
-            transform: translate(1px, 1px) rotate(0deg);
+    -webkit-transform: skewX(-10deg);
+            transform: skewX(-10deg);
+  }
+  5% {
+    -webkit-transform: skewX(10deg);
+            transform: skewX(10deg);
   }
   10% {
-    -webkit-transform: translate(-1px, -2px) rotate(-1deg);
-            transform: translate(-1px, -2px) rotate(-1deg);
+    -webkit-transform: skewX(-10deg);
+            transform: skewX(-10deg);
+  }
+  15% {
+    -webkit-transform: skewX(10deg);
+            transform: skewX(10deg);
   }
   20% {
-    -webkit-transform: translate(-3px, 0px) rotate(1deg);
-            transform: translate(-3px, 0px) rotate(1deg);
-  }
-  30% {
-    -webkit-transform: translate(3px, 2px) rotate(0deg);
-            transform: translate(3px, 2px) rotate(0deg);
-  }
-  40% {
-    -webkit-transform: translate(1px, -1px) rotate(1deg);
-            transform: translate(1px, -1px) rotate(1deg);
-  }
-  50% {
-    -webkit-transform: translate(-1px, 2px) rotate(-1deg);
-            transform: translate(-1px, 2px) rotate(-1deg);
-  }
-  60% {
-    -webkit-transform: translate(-3px, 1px) rotate(0deg);
-            transform: translate(-3px, 1px) rotate(0deg);
-  }
-  70% {
-    -webkit-transform: translate(3px, 1px) rotate(-1deg);
-            transform: translate(3px, 1px) rotate(-1deg);
-  }
-  80% {
-    -webkit-transform: translate(-1px, -1px) rotate(1deg);
-            transform: translate(-1px, -1px) rotate(1deg);
-  }
-  90% {
-    -webkit-transform: translate(1px, 2px) rotate(0deg);
-            transform: translate(1px, 2px) rotate(0deg);
+    -webkit-transform: skewX(0deg);
+            transform: skewX(0deg);
   }
   100% {
-    -webkit-transform: translate(1px, -2px) rotate(-1deg);
-            transform: translate(1px, -2px) rotate(-1deg);
+    -webkit-transform: skewX(0deg);
+            transform: skewX(0deg);
   }
 }
 
 @keyframes shake {
   0% {
-    -webkit-transform: translate(1px, 1px) rotate(0deg);
-            transform: translate(1px, 1px) rotate(0deg);
+    -webkit-transform: skewX(-10deg);
+            transform: skewX(-10deg);
+  }
+  5% {
+    -webkit-transform: skewX(10deg);
+            transform: skewX(10deg);
   }
   10% {
-    -webkit-transform: translate(-1px, -2px) rotate(-1deg);
-            transform: translate(-1px, -2px) rotate(-1deg);
+    -webkit-transform: skewX(-10deg);
+            transform: skewX(-10deg);
+  }
+  15% {
+    -webkit-transform: skewX(10deg);
+            transform: skewX(10deg);
   }
   20% {
-    -webkit-transform: translate(-3px, 0px) rotate(1deg);
-            transform: translate(-3px, 0px) rotate(1deg);
-  }
-  30% {
-    -webkit-transform: translate(3px, 2px) rotate(0deg);
-            transform: translate(3px, 2px) rotate(0deg);
-  }
-  40% {
-    -webkit-transform: translate(1px, -1px) rotate(1deg);
-            transform: translate(1px, -1px) rotate(1deg);
-  }
-  50% {
-    -webkit-transform: translate(-1px, 2px) rotate(-1deg);
-            transform: translate(-1px, 2px) rotate(-1deg);
-  }
-  60% {
-    -webkit-transform: translate(-3px, 1px) rotate(0deg);
-            transform: translate(-3px, 1px) rotate(0deg);
-  }
-  70% {
-    -webkit-transform: translate(3px, 1px) rotate(-1deg);
-            transform: translate(3px, 1px) rotate(-1deg);
-  }
-  80% {
-    -webkit-transform: translate(-1px, -1px) rotate(1deg);
-            transform: translate(-1px, -1px) rotate(1deg);
-  }
-  90% {
-    -webkit-transform: translate(1px, 2px) rotate(0deg);
-            transform: translate(1px, 2px) rotate(0deg);
+    -webkit-transform: skewX(0deg);
+            transform: skewX(0deg);
   }
   100% {
-    -webkit-transform: translate(1px, -2px) rotate(-1deg);
-            transform: translate(1px, -2px) rotate(-1deg);
+    -webkit-transform: skewX(0deg);
+            transform: skewX(0deg);
   }
 }
 
@@ -439,12 +399,12 @@ body #showcase .content p {
   font-weight: bold;
   font-family: "Tangerine";
   color: #ccc;
-  background-image: -webkit-linear-gradient(92deg, #5352ed, #eccc68);
+  background-image: linear-gradient(45deg, #4169e1, #44107a, #ff1361, #cd5c5c, #fff800);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-animation: hue 10s infinite linear;
-          animation: hue 10s infinite linear;
+  -webkit-animation: hue 15s infinite linear;
+          animation: hue 15s infinite linear;
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
 }

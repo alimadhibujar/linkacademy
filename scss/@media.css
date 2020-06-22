@@ -14,7 +14,7 @@
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  body #newsletter .container .wave,
+  body #newsletter .container .wave span,
   body #newsletter .container form,
   body #newsletter .container form .button,
   body #newsletter .container form input[type="email"] {

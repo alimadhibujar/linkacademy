@@ -53,7 +53,7 @@ body {
       opacity: 0.7;
 
       h1 {
-        padding-right: 60px;
+        padding-right: 50px;
         margin-top: 20px;
         @media (max-width: 768px) {
           font-size: 3rem;
@@ -65,8 +65,8 @@ body {
         font-family: $font2;
         text-shadow: 3px 2px 0px rgba(32, 101, 197, 0.7),
           9px 8px 0px rgba(0, 0, 0, 0.35);
-        animation: appear 2.5s linear forwards 0.5s 1,
-          swing 3s ease-in-out 0.5s infinite alternate,
+        animation: appear 0.8s linear forwards 0.5s 1,
+          swing 6s ease-in-out 0.5s infinite alternate,
           roll 5s linear 0.5s infinite;
         // background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/439415/146x263.png");
         background-image: url(https://i.postimg.cc/xjm6vPNd/bg.png);
@@ -95,11 +95,24 @@ body {
           }
         }
         @keyframes swing {
-          from {
-            transform: translateX(20px) scale(1) skewX(35deg) rotateX(-35deg);
+          // from {
+          //   transform: translateX(20px) scale(1) skewX(35deg) rotateX(-35deg);
+          // }
+          // to {
+          //   transform: translateX(-5px) scale(1.03, 1.07) rotateX(35deg);
+          // }
+          0% {
+            transform-origin: top;
+            transform: perspective(550px) rotateX(-55deg);
           }
-          to {
-            transform: translateX(-5px) scale(1.03, 1.07) rotateX(35deg);
+
+          50% {
+            transform: perspective(550px) rotateX(55deg);
+          }
+
+          100% {
+            transform-origin: top;
+            transform: perspective(550px) rotateX(-55deg);
           }
         }
       }
@@ -149,16 +162,26 @@ body {
       background: black;
       .wave {
         span {
+          margin: 0;
+          padding: 0;
           color: #2ea1ff;
-          font-size: 1rem;
-          @media (min-width: 900px) {
-            font-size: 1.3rem;
+          font-size: 1.3rem;
+          @media (max-width: 768px) {
+            flex-direction: column;
+            text-align: center;
+            width: 100%;
           }
+
           text-shadow: 2px 1px 2px #002a9c;
           position: relative;
-          display: inline-block;
+          display: table-cell;
           animation: animate 3s ease-in-out infinite;
-          animation-delay: calc(0.1s * var(--i));
+          // animation-delay: calc(0.1s * var(--i));
+          @for $i from 1 through 30 {
+            &:nth-child(#{$i}) {
+              animation-delay: $i * 0.1s;
+            }
+          }
         }
 
         -webkit-box-reflect: below -7px linear-gradient(transparent, rgba(0, 0, 0, 0.3));
@@ -174,10 +197,10 @@ body {
         0%,
         40%,
         100% {
-          transform: scale(1);
+          transform: translate(0) scale(1);
         }
         20% {
-          transform: scale(1.2, 1.5) translate3d(5px, -5px, 0px);
+          transform: translate3d(5px, -5px, 0px) scale(1.2, 1.5);
         }
       }
 
@@ -273,13 +296,25 @@ body {
         transition: box-shadow 0.75s ease, transform 0.75s ease,
           margin-top 0.75s;
         &:hover {
-          box-shadow: 0 8px 40px rgba(#fff, 0.15); /*rgba(255, 242, 0, 0.3)*/
+          box-shadow: 0 8px 40px rgba(255, 242, 0, 0.25); /*rgba(#fff, 0.15)*/
           transform: scale(1.05);
           margin-top: 10px;
 
           img {
-            transform: rotateY(360deg);
             margin-top: 6px;
+            animation: tilt 2s ease-in-out infinite;
+          }
+
+          @keyframes tilt {
+            0% {
+              transform: perspective(300px) rotateY(30deg);
+            }
+            50% {
+              transform: perspective(300px) rotateY(-30deg);
+            }
+            100% {
+              transform: perspective(300px) rotateY(30deg);
+            }
           }
         }
 

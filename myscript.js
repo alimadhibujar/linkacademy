@@ -4,21 +4,21 @@ let loginButton = document.getElementById("loginbutton");
 
 //variablet per Login Form dhe Register Form
 
-let modalForm = document.getElementById("id01");
-let loginForm = document.querySelector("#login-form");
-let signUp = document.getElementById("sign-up");
-let registerForm = document.getElementById("register");
+const modalForm = document.getElementById("id01");
+const loginForm = document.querySelector("#login-form");
+const signUp = document.getElementById("sign-up");
+const registerForm = document.getElementById("register");
 registerForm.style.display = "none";
-let backToLogin = document.getElementById("back-to-login");
-const span = document.getElementsByClassName("close");
-let wrapper = document.querySelector(".wrapper");
+const backToLogin = document.getElementById("back-to-login");
+const closeSpans = document.getElementsByClassName("close");
+const wrapper = document.querySelector(".wrapper");
 
 //variablat per main menun ne versionin mobail
 const menuja = document.getElementsByClassName("main")[0];
 const butoniMenus = document.getElementsByClassName("icon")[0];
 const mobilMenu = document.getElementById("mobilmenu");
 const mobileLink = document.querySelectorAll("a.menulink");
-const dropDaun = document.querySelectorAll(".dropdown");
+
 //Variablat per Drop menun ne versioni mobile
 // const htmlButton = menuja.children[0].children[0];
 // const cssButton = menuja.children[1].children[0];
@@ -38,7 +38,7 @@ window.addEventListener("load",function() {
 
 //kur te klikojm butonin login te shfaqet login-form
 
-loginButton.addEventListener("click", function() {
+loginButton.addEventListener("click", () => {
   modalForm.style.display = "block";
   loginForm.style.display = "block";
   registerForm.style.display = "none";
@@ -46,25 +46,28 @@ loginButton.addEventListener("click", function() {
 
 //kur te klikojm sign up te shfaqet Register-Form
 
-signUp.addEventListener("click", function() {
+signUp.addEventListener("click", () => {
   loginForm.style.display = "none";
   registerForm.style.display = "block";
 });
 
 //kur te klikojm linkun login te kthehemi te Login Form
 
-backToLogin.addEventListener("click", function() {
+backToLogin.addEventListener("click", () => {
   loginForm.style.display = "block";
   registerForm.style.display = "none";
 });
 
 //kur te klikojm te span te mbyllet Modal
-for (i = 0; i < 2; i++) {
-  span[i].addEventListener("click", function() {
-    modalForm.style.display = "none";
-  });
+for (const closeSpan of closeSpans) {
+  closeSpan.addEventListener("click", () => (modalForm.style.display = "none"));
 }
-// span[1].addEventListener("click", function() {
+// for (i = 0; i < 2; i++) {
+//   closeSpans[i].addEventListener("click", function () {
+//     modalForm.style.display = "none";
+//   });
+// }
+// closeSpans[1].addEventListener("click", function() {
 //   modalForm.style.display = "none";
 // });
 
@@ -72,7 +75,7 @@ for (i = 0; i < 2; i++) {
  "id = register" ose divit id = "id01" 
  clas = "modal" te mbyllet  Modali*/
 
-window.addEventListener("click", function() {
+window.addEventListener("click", () => {
   if (
     event.target == wrapper ||
     event.target == registerForm ||
@@ -82,79 +85,41 @@ window.addEventListener("click", function() {
   }
 });
 
-//fuksioni per hapjen e mainmenus ne versionin mobail
-butoniMenus.addEventListener("click", function() {
-  // menuja.classList.toggle("show");
-  // mobilmenun e shtuar me vone
-  if (mobilMenu.style.display === "block") {
-    mobilMenu.style.display = "none";
-  } else {
-    mobilMenu.style.display = "block";
-  }
-  closeDropdaun();
+//fuksioni per hapjen e main menus ne versionin mobile
+// menuja.classList.toggle("show");
+butoniMenus.addEventListener("click", () => {
+  mobilMenu.style.display === "block"
+    ? (mobilMenu.style.display = "none")
+    : (mobilMenu.style.display = "block");
+  closeDropdown();
 });
 
 //mobilemenu
-function closeDropdaun() {
-  for (j = 0; j < dropDaun.length; j++) dropDaun[j].style.display = "none";
+function closeDropdown() {
+  const dropDown = document.querySelectorAll(".dropdown");
+  dropDown.forEach(({ style }) => (style.display = "none"));
+  // for (let j = 0; j < dropDown.length; j++); dropDown[j].style.display = "none";
 }
-
-for (i = 0; i < mobileLink.length; i++) {
-  mobileLink[i].addEventListener("click", function() {
-    closeDropdaun();
-    let dropdown = this.nextElementSibling;
+mobileLink.forEach((link) => {
+  link.addEventListener("click", function () {
+    closeDropdown();
+    const dropdown = this.nextElementSibling;
     if (dropdown.style.display === "none") {
       dropdown.style.display = "block";
     } else {
       dropdown.style.display = "none";
     }
   });
-}
-// e pa perfunduar!
-// var i;
-// for (i = 0; i < drMenu.length; i++) {
-// htmlButton.addEventListener("click", function() {
-//   //     this.classList.toggle("active");
-//   //     var dropcontent = this.nextElementSibling;
-//   if (window.innerWidth < 500 && dropMenu1.style.display === "none") {
-//     dropMenu1.style.display = "block";
-//   } else {
-//     dropMenu1.style.display = "none";
-//   }
-// });
+});
+
+// for (let i = 0; i < mobileLink.length; i++) {
+//   mobileLink[i].addEventListener("click", function () {
+//     closeDropdown();
+//     const dropdown = this.nextElementSibling;
+//     if (dropdown.style.display === "none") {
+//       dropdown.style.display = "block";
+//     } else {
+//       dropdown.style.display = "none";
+//     }
+//   });
 // }
-// cssButton.addEventListener("click", function() {
-//   if (window.innerWidth < 500 && dropMenu2.style.display === "none") {
-//     dropMenu2.style.display = "block";
-//   } else {
-//     dropMenu2.style.display = "none";
-//   }
-// });
-// jsButton.addEventListener("click", function() {
-//   if (window.innerWidth < 500 && dropMenu3.style.display === "none") {
-//     dropMenu3.style.display = "block";
-//   } else {
-//     dropMenu3.style.display = "none";
-//   }
-// });
-// sqlButton.addEventListener("click", function() {
-//   if (window.innerWidth < 500 && dropMenu4.style.display === "none") {
-//     dropMenu4.style.display = "block";
-//   } else {
-//     dropMenu4.style.display = "none";
-//   }
-// });
-// phpButton.addEventListener("click", function() {
-//   if (window.innerWidth < 500 && dropMenu5.style.display === "none") {
-//     dropMenu5.style.display = "block";
-//   } else {
-//     dropMenu5.style.display = "none";
-//   }
-// });
-// pythonButton.addEventListener("click", function() {
-//   if (window.innerWidth < 500 && dropMenu6.style.display === "none") {
-//     dropMenu6.style.display = "block";
-//   } else {
-//     dropMenu6.style.display = "none";
-//   }
-// });

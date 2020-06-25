@@ -772,6 +772,9 @@ body #newsletter .container form .button:focus {
 
 body #boxes {
   background-color: #000b18;
+  /* Brings the child items back in, even though the parent is `hidden` */
+  /* Fade out all items when the parent is hovered 
+    For mor info https://codepen.io/shshaw/pen/wWQZEB*/
 }
 
 body #boxes .container {
@@ -779,6 +782,9 @@ body #boxes .container {
   display: grid;
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
+  /* SIBLING FADE: fade out siblings around a hovered item 
+       Prevents :hover from triggering in the gaps between items*/
+  visibility: hidden;
 }
 
 @media (max-width: 768px) {
@@ -803,10 +809,11 @@ body #boxes .container .box {
   border-radius: 10px;
   -webkit-box-shadow: 0 0 2px rgba(84, 160, 255, 0.5), inset 0 0 3px rgba(123, 237, 159, 0.15);
           box-shadow: 0 0 2px rgba(84, 160, 255, 0.5), inset 0 0 3px rgba(123, 237, 159, 0.15);
-  -webkit-transition: margin-top 0.75s, -webkit-box-shadow 0.75s ease, -webkit-transform 0.75s ease;
-  transition: margin-top 0.75s, -webkit-box-shadow 0.75s ease, -webkit-transform 0.75s ease;
-  transition: box-shadow 0.75s ease, transform 0.75s ease, margin-top 0.75s;
-  transition: box-shadow 0.75s ease, transform 0.75s ease, margin-top 0.75s, -webkit-box-shadow 0.75s ease, -webkit-transform 0.75s ease;
+  -webkit-transition: all 0.75s ease, margin-top 0.75s, -webkit-transform 0.75s ease;
+  transition: all 0.75s ease, margin-top 0.75s, -webkit-transform 0.75s ease;
+  transition: all 0.75s ease, transform 0.75s ease, margin-top 0.75s;
+  transition: all 0.75s ease, transform 0.75s ease, margin-top 0.75s, -webkit-transform 0.75s ease;
+  /* Fade in the currently hovered item */
 }
 
 @media (max-width: 768px) {
@@ -816,9 +823,10 @@ body #boxes .container .box {
 }
 
 body #boxes .container .box:hover {
-  -webkit-box-shadow: 0 8px 40px rgba(255, 242, 0, 0.25);
-          box-shadow: 0 8px 40px rgba(255, 242, 0, 0.25);
-  /*rgba(#fff, 0.15)*/
+  opacity: 1;
+  -webkit-box-shadow: 0 8px 40px rgba(84, 160, 255, 0.5);
+          box-shadow: 0 8px 40px rgba(84, 160, 255, 0.5);
+  /*rgba(#fff, .15)*/
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
   margin-top: 10px;
@@ -872,6 +880,20 @@ body #boxes .container img {
   transition: margin-top 0.75s, -webkit-transform 1.8s ease-in-out;
   transition: margin-top 0.75s, transform 1.8s ease-in-out;
   transition: margin-top 0.75s, transform 1.8s ease-in-out, -webkit-transform 1.8s ease-in-out;
+}
+
+body #boxes .container > * {
+  visibility: visible;
+  -webkit-transition: opacity 150ms linear 100ms, -webkit-transform 150ms ease-in-out 100ms;
+  transition: opacity 150ms linear 100ms, -webkit-transform 150ms ease-in-out 100ms;
+  transition: opacity 150ms linear 100ms, transform 150ms ease-in-out 100ms;
+  transition: opacity 150ms linear 100ms, transform 150ms ease-in-out 100ms, -webkit-transform 150ms ease-in-out 100ms;
+}
+
+body #boxes .container:hover > * {
+  opacity: 0.6;
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
 }
 
 #menuja {

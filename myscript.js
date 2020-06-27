@@ -28,18 +28,12 @@ const mobileLink = document.querySelectorAll("a.menulink");
 // const pythonButton = menuja.children[5].children[0];
 // const drMenu = dropMenu1.children;
 // console.log(htmlButton);
-/*kur te ngarkohet windowsi videjoa te bej autoply ne vazhdimsi
-
-window.addEventListener("load",function() {
-  bgVideo.setAttribute("autoplay", "true");
-  bgVideo.setAttribute("loop", "true");
-  });
-*/
 
 //kur te klikojm butonin login te shfaqet login-form
 
 loginButton.addEventListener("click", () => {
-  modalForm.style.display = "block";
+  modalForm.style.animationName = "roadRunnerIn";
+  // modalForm.style.display = "block";
   loginForm.style.display = "block";
   registerForm.style.display = "none";
 });
@@ -59,30 +53,29 @@ backToLogin.addEventListener("click", () => {
 });
 
 //kur te klikojm te span te mbyllet Modal
-for (const closeSpan of closeSpans) {
-  closeSpan.addEventListener("click", () => (modalForm.style.display = "none"));
-}
-// for (i = 0; i < 2; i++) {
-//   closeSpans[i].addEventListener("click", function () {
-//     modalForm.style.display = "none";
-//   });
+// for (const closeSpan of closeSpans) {
+//   closeSpan.addEventListener("click", () =>
+//     (
+//       (modalForm.style.animationName = "roadRunnerOut")
+//     )
+//   );
 // }
-// closeSpans[1].addEventListener("click", function() {
-//   modalForm.style.display = "none";
-// });
 
 /*kur te klikojm brenda "class = Wrapper" ,
  "id = register" ose divit id = "id01" 
  clas = "modal" te mbyllet  Modali*/
 
 window.addEventListener("click", () => {
-  if (
-    event.target == wrapper ||
-    event.target == registerForm ||
-    event.target == modalForm
-  ) {
-    modalForm.style.display = "none";
-  }
+  // for (i = 0; i < closeSpans.length; i++)
+  for (const closeSpan of closeSpans)
+    if (
+      event.target == wrapper ||
+      event.target == registerForm ||
+      event.target == modalForm ||
+      event.target == closeSpan
+    ) {
+      modalForm.style.animationName = "roadRunnerOut";
+    }
 });
 
 //fuksioni per hapjen e main menus ne versionin mobile

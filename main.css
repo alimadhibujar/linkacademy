@@ -1391,6 +1391,7 @@ body #boxes .container:hover > * {
 
 /*..................FUNDI I MENUSE.....................*/
 .modal {
+  display: none;
   /* Hidden by default */
   position: fixed;
   /* Stay in place */
@@ -1586,12 +1587,11 @@ body #boxes .container:hover > * {
   width: 25%;
   margin: 170px auto;
   background: #35394a;
-  border-radius: 10px;
-  background: linear-gradient(45deg, #35394a 0%, #1f222e 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#35394a', endColorstr='#1f222e',GradientType=1 );
+  border-radius: 30px;
   padding: 20px 30px;
-  -webkit-box-shadow: -1px 6px 27px 5px rgba(0, 0, 0, 0.55);
-          box-shadow: -1px 6px 27px 5px rgba(0, 0, 0, 0.55);
+  background: linear-gradient(145deg, #20222f, #252938);
+  -webkit-box-shadow: 5px 5px 2px #111319, -5px -5px 2px #35394f;
+          box-shadow: 5px 5px 2px #111319, -5px -5px 2px #35394f;
 }
 
 @media (max-width: 1200px) and (min-width: 769px) {
@@ -1603,6 +1603,7 @@ body #boxes .container:hover > * {
 @media (max-width: 768px) and (min-width: 500px) {
   .modal .wrapper-content {
     width: 45%;
+    margin: 0 auto;
   }
 }
 

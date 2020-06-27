@@ -1,5 +1,5 @@
 .modal {
-  display: none;
+  // display: none;
   /* Hidden by default */
   position: fixed;
   /* Stay in place */
@@ -11,8 +11,34 @@
   /* Full width */
   height: 100%;
   /* Full height */
-  overflow-x: hidden;
+  overflow: hidden;
   background-color: rgba(3, 12, 22, 0.35);
+  animation: roadRunnerOut 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+  transform: translateX(-1500px);
+}
+
+@keyframes roadRunnerIn {
+  0% {
+    transform: translateX(-1500px) skewX(30deg) scaleX(1.3);
+  }
+  70% {
+    transform: translateX(30px) skewX(0deg) scaleX(0.9);
+  }
+  100% {
+    transform: translateX(0px) skewX(0deg) scaleX(1);
+  }
+}
+
+@keyframes roadRunnerOut {
+  0% {
+    transform: translateX(0px) skewX(0deg) scaleX(1);
+  }
+  30% {
+    transform: translateX(-30px) skewX(-5deg) scaleX(0.9);
+  }
+  100% {
+    transform: translateX(1650px) skewX(20deg) scaleX(1.3);
+  }
 }
 
 .modal .wrapper {
@@ -103,6 +129,7 @@
   background: linear-gradient(45deg, #35394a 0%, #1f222e 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#35394a', endColorstr='#1f222e',GradientType=1 );
   padding: 20px 30px;
+  box-shadow: -1px 6px 27px 5px rgba(0, 0, 0, 0.55);
 }
 
 .modal .wrapper-content button {

@@ -32,8 +32,8 @@ const mobileLink = document.querySelectorAll("a.menulink");
 //kur te klikojm butonin login te shfaqet login-form
 
 loginButton.addEventListener("click", () => {
+  modalForm.style.display = "block";
   modalForm.style.animationName = "roadRunnerIn";
-  // modalForm.style.display = "block";
   loginForm.style.display = "block";
   registerForm.style.display = "none";
 });
@@ -75,6 +75,7 @@ window.addEventListener("click", () => {
       event.target == closeSpan
     ) {
       modalForm.style.animationName = "roadRunnerOut";
+      // modalForm.style.display = "none";
     }
 });
 

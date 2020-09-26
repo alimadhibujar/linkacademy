@@ -18,6 +18,9 @@ const menuja = document.getElementsByClassName("main")[0];
 const butoniMenus = document.getElementsByClassName("icon")[0];
 const mobilMenu = document.getElementById("mobilmenu");
 const mobileLink = document.querySelectorAll("a.menulink");
+//variablet per Submit Button
+const submitButton = document.querySelector(".button");
+const typeSound = new Audio("https://assets.codepen.io/567707/audio-typer.wav");
 
 //Variablat per Drop menun ne versioni mobile
 // const htmlButton = menuja.children[0].children[0];
@@ -65,14 +68,14 @@ backToLogin.addEventListener("click", () => {
  "id = register" ose divit id = "id01" 
  clas = "modal" te mbyllet  Modali*/
 
-window.addEventListener("click", () => {
+window.addEventListener("click", (e) => {
   // for (i = 0; i < closeSpans.length; i++)
   for (const closeSpan of closeSpans)
     if (
-      event.target == wrapper ||
-      event.target == registerForm ||
-      event.target == modalForm ||
-      event.target == closeSpan
+      e.target == wrapper ||
+      e.target == registerForm ||
+      e.target == modalForm ||
+      e.target == closeSpan
     ) {
       modalForm.style.animationName = "roadRunnerOut";
       // modalForm.style.display = "none";
@@ -105,6 +108,8 @@ mobileLink.forEach((link) => {
     }
   });
 });
+//sound example https://codepen.io/oliviale/pen/gOrEmpz
+submitButton.addEventListener("click", () => typeSound.play());
 
 // for (let i = 0; i < mobileLink.length; i++) {
 //   mobileLink[i].addEventListener("click", function () {

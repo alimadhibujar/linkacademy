@@ -18,7 +18,10 @@ const menuja = document.getElementsByClassName("main")[0];
 const butoniMenus = document.getElementsByClassName("icon")[0];
 const mobilMenu = document.getElementById("mobilmenu");
 const mobileLink = document.querySelectorAll("a.menulink");
-//variablet per Submit Button
+
+//variablet per Submit Button sound effect
+const buttonEffect = modalForm.querySelectorAll("button[type = button]");
+const loginSound = modalForm.querySelectorAll("input[type = submit]");
 const submitButton = document.querySelector(".button");
 const typeSound = new Audio("https://assets.codepen.io/567707/audio-typer.wav");
 
@@ -110,6 +113,13 @@ mobileLink.forEach((link) => {
 });
 //sound example https://codepen.io/oliviale/pen/gOrEmpz
 submitButton.addEventListener("click", () => typeSound.play());
+loginSound.forEach((input) =>
+  input.addEventListener("click", () => typeSound.play())
+);
+
+buttonEffect.forEach((button) =>
+  button.addEventListener("click", () => typeSound.play())
+);
 
 // for (let i = 0; i < mobileLink.length; i++) {
 //   mobileLink[i].addEventListener("click", function () {

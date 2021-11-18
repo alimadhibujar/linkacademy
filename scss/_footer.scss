@@ -1,6 +1,8 @@
 footer {
   background-color: #130224;
   text-align: center;
+  position: sticky;
+  top: 100vh;
   &:hover {
     img {
       transform: rotateY(180deg);

@@ -17,10 +17,10 @@
     aside#sidebar {
       flex-basis: 33%;
       margin-left: auto;
-      @media (max-width: 1100px) and (min-width:900px) {
+      @media (max-width: 1100px) and (min-width: 900px) {
         flex-basis: 32%;
       }
-      @media (max-width: 899px) and (min-width:501px) {
+      @media (max-width: 899px) and (min-width: 501px) {
         flex-basis: 29%;
       }
     }

@@ -58,7 +58,8 @@ header .container nav a {
   text-transform: uppercase;
   font-weight: 500;
   padding: calc(var(--_gap) / 2);
-  transition: color 200ms linear, opacity 100ms linear;
+  transition: color 200ms linear 100ms, opacity 100ms linear 100ms;
+  position: relative;
 }
 @media (min-width: 769px) and (max-width: 1000px) {
   header .container nav a {
@@ -73,7 +74,7 @@ header .container nav a:focus-visible {
 header .container nav li:hover a i,
 header .container nav a:focus-visible i {
   color: black;
-  transition: color 200ms linear;
+  transition: color 200ms linear 100ms, opacity 100ms linear 100ms;
 }
 header .container .current a,
 header .container .current a i {
@@ -86,7 +87,6 @@ header .container nav a i {
 }
 header .container nav li {
   overflow: hidden;
-  position: relative;
   padding: calc(var(--_gap) / 2);
   min-inline-size: 3rem;
 }
@@ -97,10 +97,10 @@ header .container nav li a::before {
   inset-block-end: 0;
   height: 100%;
   background-color: #e8491d;
-  border-radius: 25px;
+  border-radius: 10px;
   translate: var(--_translate, 0);
   scale: var(--_scale, 0) 1;
-  transition: scale 200ms var(--_scale-delay, 0ms), translate 300ms;
+  transition: scale 200ms var(--_scale-delay, 0ms), translate 500ms;
   z-index: -1;
 }
 header .container nav li:hover ~ li {
